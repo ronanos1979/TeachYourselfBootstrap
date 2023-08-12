@@ -1,0 +1,19 @@
+{
+  "name": "teachyourselfbootstrap",
+  "version": "1.0.0",
+  "description": "Teach Yourself Bootstrap in 24 hours",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronanos1979"
+  },
+  "author": "Ronan O'Sullivan",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1"
+  }
+}
