@@ -2,31 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+ .show-grid [class^="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+  }
+  </style>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
-    <!-- [if lt IE 9]>
+    <!--[if lt IE 9]>
     <script
-    src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
     </script>
     <![endif]-->
 </head>
 <body>
-    <h1>Hell, world!</h1>
+<h1>Teach yourself Bootstrap!</h1>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-    <a href="chapter2/grid.html">Grid</a>
-    <a href="chatper3/basic_bootstrap_template.html">Basic BootStrap Template</a>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<div class="container">
+
+    <div class="row show-grid">
+        <div class="col-md-7"><a href="chapter2/grid.html"><h1>Table of Contents</h1></a></div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-5"><a href="chapter3/basic_bootstrap_template.html">Chapter 3</a></div>
+        <div class="col-md-5"><a href="chapter3/basic_bootstrap_template.html">Basic BootStrap Template</a></div>
+    </div>
+    <div class="row show-grid">
+        <div class="col-md-5"><a href="chapter3/basic_bootstrap_template.html">&nbsp;</div>
+        <div class="col-md-5"><a href="chapter3/bootstrap_starter_template.html">BootStrap Starter Template</a></div>
+    </div>
+    <div class="row show-grid">
+        <div class="col-md-5"><a href="chapter3/basic_bootstrap_template.html">&nbsp;</div>
+        <div class="col-md-5"><a href="chapter3/the_bootstrap_theme.html">The Bootstrap Theme</a></div>
+    </div>
+    <div class="row show-grid">
+        <div class="col-md-5"><a href="chapter3/basic_bootstrap_template.html">&nbsp;</div>
+        <div class="col-md-5"><a href="chapter3/jumbotron.html">Jumbotron</a></div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="col-md-5"><a href="chapter2/grid.html">Chapter 2</a></div>
+        <div class="col-md-5"><a href="chapter2/grid.html">Grid</a></div>
+    </div>
+</div>
 </body>
 </html>
