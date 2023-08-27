@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClearFix Problem!!</title>
+
+  <style>
+  /*  aside { background-color: #E8E8E7; } */
+  </style>
+
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
+  <!--[if lt IE 9]>
+  <script
+          src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
+  </script>
+  <![endif]-->
+  <!-- Tools created by Ronan -->
+  <script src="../js/tools.js"></script>
+</head>
+<body>
+<h1>The ClearFix Problem</h1>
+
+<p>
+<div id="viewPortSizeDisplay">
+  Some default text should never display;
+</div>
+<script>printViewPortSize();</script>
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">This is a super long column that might not load correctly in all browsers</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+  </div>
+</div>
+
+<hr/>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">This is a super long column that might not load correctly in all browsers</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+  </div>
+</div>
+<hr/>
+
+<div class="container">
+  <!-- first row - 3 equal columns -->
+  <div class="row">
+    <div class="col-xs-6 col-sm-3" >This is a super long column that might not load correctly in all browsers</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+  </div>
+</div>
+<hr/>
+
+<div class="container">
+  <!-- first row - 3 equal columns -->
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">This is a super long column that might not load correctly in all browsers</div>
+
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="clearfix visible-xs-block">FILLING IN</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3">short column</div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

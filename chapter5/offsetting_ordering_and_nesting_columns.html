@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid Columns!!</title>
+
+    <style>
+    aside { background-color: #E8E8E7; }
+  </style>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
+    <!--[if lt IE 9]>
+    <script
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+    <!-- Tools created by Ronan -->
+    <script src="../js/tools.js"></script>
+</head>
+<body>
+<h1>Offsetting, Ordering and Nesting Columns</h1>
+
+<p>
+<div id="viewPortSizeDisplay">
+    Some default text should never display;
+</div>
+<script>printViewPortSize();</script>
+</p>
+<div class="container">
+
+    <section class="row">
+        <aside class="col-md-5"><h2>five columns wide</h2></aside>
+        <section class="col-md-6"><h2>six columns wide not offset</h2></section>
+    </section>
+    <section class="row">
+        <aside class="col-md-5"><h2>five columns wide</h2></aside>
+        <section class="col-md-6 col-md-offset-1"><h2>six columns wide offset one</h2></section>
+    </section>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">The first column is eight wide, not changed.</div>
+        <div class="col-md-4">The second column is four wide, not changed</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-push-4">The first column is eight wide, pushed over four.</div>
+        <div class="col-md-4 col-md-pull-8">The second column is four wide, pulled back eight.</div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>
