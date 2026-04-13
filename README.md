@@ -19,3 +19,9 @@ mklink /D css includes\bootstrap-3.3.7-dist\css
 mklink /D js includes\bootstrap-3.3.7-dist\js
 ```
 
+## Running
+Run with the following commands
+
+```
+gradlew appRun
+```
