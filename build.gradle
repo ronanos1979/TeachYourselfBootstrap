@@ -1,0 +1,13 @@
+plugins {
+    id 'war'
+    id 'org.gretty' version '5.0.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+gretty {
+    httpPort = 8080
+    contextPath = '/'
+}
