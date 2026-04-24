@@ -14,6 +14,13 @@ git config --global core.symlinks true
 I created symlinks from 
 
 ```
+mklink /D fonts includes\bootstrap-5.0.2-dist\fonts
+mklink /D css includes\bootstrap-5.0.2-dist\css
+mklink /D js includes\bootstrap-5.0.2-dist\js
+```
+
+
+```
 mklink /D fonts includes\bootstrap-3.3.7-dist\fonts
 mklink /D css includes\bootstrap-3.3.7-dist\css
 mklink /D js includes\bootstrap-3.3.7-dist\js

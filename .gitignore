@@ -1,3 +1,23 @@
+# Gradle
+.gradle/
+build/
+
+# Java build artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA - ignore generated/local state files
+.idea/claudeCodeTabState.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/.gitignore
+*.iml
+*.iws
+
 # Logs
 logs
 *.log
