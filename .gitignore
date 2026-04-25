@@ -2,6 +2,11 @@
 .gradle/
 build/
 
+# Frontend libraries copied from node_modules by Gradle copyLibs task
+src/main/webapp/includes/css/
+src/main/webapp/includes/js/
+src/main/webapp/includes/fonts/
+
 # Java build artifacts
 *.class
 *.jar

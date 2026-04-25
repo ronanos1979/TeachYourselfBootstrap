@@ -11,3 +11,35 @@ gretty {
     httpPort = 8080
     contextPath = '/'
 }
+
+def isWindows = System.getProperty('os.name').toLowerCase().contains('windows')
+
+task npmInstall(type: Exec) {
+    commandLine isWindows ? ['cmd', '/c', 'npm install'] : ['npm', 'install']
+}
+
+task cleanLibs(type: Delete) {
+    delete 'src/main/webapp/includes/css'
+    delete 'src/main/webapp/includes/js'
+    delete 'src/main/webapp/includes/fonts'
+}
+
+task copyLibs(type: Copy, dependsOn: [npmInstall, cleanLibs]) {
+    from('node_modules/bootstrap/dist/css')   { into 'css' }
+    from('node_modules/bootstrap/dist/js')    { into 'js' }
+    from('node_modules/bootstrap/dist/fonts') { into 'fonts' }
+    from('node_modules/jquery/dist') {
+        include 'jquery.min.js'
+        into 'js'
+    }
+    into 'src/main/webapp/includes'
+}
+
+afterEvaluate {
+    tasks.named('appRun').configure {
+        dependsOn copyLibs
+    }
+    tasks.named('prepareInplaceWebAppFolder').configure {
+        dependsOn copyLibs
+    }
+}
