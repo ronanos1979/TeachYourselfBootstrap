@@ -7,7 +7,9 @@
   <title>A Three Column Layout!!</title>
 
   <style>
-    aside { background-color: #E8E8E7; }
+    aside   { background-color: #d9edf7; border: 1px solid #bce8f1; padding: 8px; }
+    article { background-color: #dff0d8; border: 1px solid #d6e9c6; padding: 8px; }
+    .label-row { background: #555; color: #fff; padding: 6px 8px; margin: 16px 0 4px; font-weight: bold; }
   </style>
 
   <!-- Bootstrap -->
@@ -26,6 +28,7 @@
 </head>
 <body>
 <h1>Three Column Layout</h1>
+<p>Demonstrates how Bootstrap's <code>col-md-*</code> classes create multi-column layouts. Columns stack vertically on small screens (below md, i.e. &lt;992px) and sit side by side on medium screens and above.</p>
 
 <p>
   <div id="viewPortSizeDisplay">
@@ -33,44 +36,44 @@
   </div>
   <script>printViewPortSize();</script>
 </p>
+
 <div class="container">
-<!-- first row - 3 equal columns -->
+
+  <p class="label-row">Example 1 — Three equal columns (each col-md-4 = 4/12 = one third)</p>
+  <p>Resize below 992px: all three columns stack into a single full-width column.</p>
   <section class="row">
-    <aside class="col-md-4"><h2>Column 1</h2></aside>
-    <article class="col-md-4"><h2>Column 2</h2></article>
-    <aside class="col-md-4"><h2>Column 3</h2></aside>
-  </section>
-  <section class="row">
-    <aside class="col-md-2"><h2>Column 1</h2></aside>
-    <article class="col-md-6"><h2>Column 2</h2></article>
-    <aside class="col-md-4"><h2>Column 3</h2></aside>
+    <aside class="col-md-4"><h2>Column 1 — col-md-4</h2><p>One third of the row at md and above.</p></aside>
+    <article class="col-md-4"><h2>Column 2 — col-md-4</h2><p>One third of the row at md and above.</p></article>
+    <aside class="col-md-4"><h2>Column 3 — col-md-4</h2><p>One third of the row. 4+4+4=12. ✓</p></aside>
   </section>
 
+  <p class="label-row">Example 2 — Unequal columns: narrow sidebar, wide content, medium sidebar (2+6+4=12)</p>
   <section class="row">
-    <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2" id="something1"><h2>Ronan Trying should be different per display</h2></aside>
-    <article class="col-xs-12 col-sm-6 col-md-4" id="something2"><h2>On Large device will use medium as medium or larger</h2></article>
-    <aside class="col-xs-12 col-sm-6" id="something3"><h2>On Large device will use small as small or larger</h2></aside>
+    <aside class="col-md-2"><h2>col-md-2</h2><p>Narrow left sidebar (2/12)</p></aside>
+    <article class="col-md-6"><h2>col-md-6</h2><p>Main content area — half the page (6/12)</p></article>
+    <aside class="col-md-4"><h2>col-md-4</h2><p>Right sidebar (4/12). Total = 12 ✓</p></aside>
   </section>
 
-
+  <p class="label-row">Example 3 — Responsive columns: different widths at each breakpoint</p>
+  <p>
+    <strong>Col 1:</strong> <code>col-xs-12 col-sm-6 col-md-4 col-lg-2</code> — gets narrower as the screen grows.<br>
+    <strong>Col 2:</strong> <code>col-xs-12 col-sm-6 col-md-4</code> — no lg rule, so it keeps md width on large screens.<br>
+    <strong>Col 3:</strong> <code>col-xs-12 col-sm-6</code> — no md/lg rule, so it keeps sm width on larger screens.
+  </p>
   <section class="row">
-    <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2" id="displaysizecol1"><h2>displaysizecol1</h2></aside>
-    <article class="col-xs-12 col-sm-6 col-md-4" id="displaysizecol2"><h2>displaysizecol2</h2></article>
-    <aside class="col-xs-12 col-sm-6" id="displaysizecol3"><h2>displaysizecol3</h2></aside>
+    <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><h2>Col 1</h2><p>xs: full | sm: half | md: third | lg: narrow</p></aside>
+    <article class="col-xs-12 col-sm-6 col-md-4"><h2>Col 2</h2><p>xs: full | sm: half | md+: third</p></article>
+    <aside class="col-xs-12 col-sm-6"><h2>Col 3</h2><p>xs: full | sm+: half</p></aside>
   </section>
 
-
+  <p class="label-row">Example 4 — col-lg-4 only: side by side ONLY on large screens (≥1200px)</p>
+  <p>No xs/sm/md rules are set, so these columns stack full-width on anything below lg. Try resizing to see them collapse.</p>
   <section class="row">
-    <aside class="col-lg-4"><h2>col-lg-4</h2></aside>
-    <article class="col-lg-4"><h2>col-lg-4</h2></article>
-    <aside class="col-lg-4"><h2>col-lg-4</h2></aside>
+    <aside class="col-lg-4"><h2>col-lg-4</h2><p>Full-width below lg, one third at lg+</p></aside>
+    <article class="col-lg-4"><h2>col-lg-4</h2><p>Full-width below lg, one third at lg+</p></article>
+    <aside class="col-lg-4"><h2>col-lg-4</h2><p>Full-width below lg, one third at lg+</p></aside>
   </section>
 
-  <section class="row">
-    <aside class="col-xl-4"><h2>col-xl-4</h2></aside>
-    <article class="col-xl-4"><h2>col-xl-4</h2></article>
-    <aside class="col-xl-4"><h2>col-xl-4</h2></aside>
-  </section>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

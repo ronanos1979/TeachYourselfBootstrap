@@ -8,10 +8,19 @@
 
   <style>
   /*  aside { background-color: #E8E8E7; } */
+  .col-xs-6 { min-height: 30px; }
+  .col1 { background-color: #d9534f; color: white; }
+  .col2 { background-color: #5bc0de; color: white; }
+  .col3 { background-color: #5cb85c; color: white; }
+  .col4 { background-color: #f0ad4e; color: white; }
   </style>
 
   <!-- Bootstrap -->
   <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/theme.css" rel="stylesheet">
+  <link href="../chapter4/styles.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
@@ -26,6 +35,7 @@
 </head>
 <body>
 <h1>The ClearFix Problem</h1>
+<p>Resize your browser to <strong>below 768px wide</strong> to see the xs breakpoint where the problem appears.</p>
 
 <p>
 <div id="viewPortSizeDisplay">
@@ -34,48 +44,26 @@
 <script>printViewPortSize();</script>
 </p>
 
+<h2>Without clearfix (broken at xs)</h2>
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-sm-3">This is a super long column that might not load correctly in all browsers</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br><br>It has lots of content.<br><br>Much more than col 2.<br><br>This extra height is what causes the layout bug below.</div>
+    <div class="col-xs-6 col-sm-3 col2">Col 2 — short</div>
+    <div class="col-xs-6 col-sm-3 col3">Col 3 — gets pushed to the RIGHT (next to col 1's lower half) instead of starting at the left edge</div>
+    <div class="col-xs-6 col-sm-3 col4">Col 4 — short</div>
   </div>
 </div>
 
 <hr/>
 
+<h2>With clearfix (fixed at xs)</h2>
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-sm-3">This is a super long column that might not load correctly in all browsers</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br><br>It has lots of content.<br><br>Much more than col 2.<br><br>This extra height is what causes the layout bug above.</div>
+    <div class="col-xs-6 col-sm-3 col2">Col 2 — short</div>
     <div class="clearfix visible-xs-block"></div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-  </div>
-</div>
-<hr/>
-
-<div class="container">
-  <!-- first row - 3 equal columns -->
-  <div class="row">
-    <div class="col-xs-6 col-sm-3" >This is a super long column that might not load correctly in all browsers</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-  </div>
-</div>
-<hr/>
-
-<div class="container">
-  <!-- first row - 3 equal columns -->
-  <div class="row">
-    <div class="col-xs-6 col-sm-3">This is a super long column that might not load correctly in all browsers</div>
-
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="clearfix visible-xs-block">FILLING IN</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
-    <div class="col-xs-6 col-sm-3">short column</div>
+    <div class="col-xs-6 col-sm-3 col3">Col 3 — starts correctly at the LEFT edge thanks to clearfix</div>
+    <div class="col-xs-6 col-sm-3 col4">Col 4 — short</div>
   </div>
 </div>
 

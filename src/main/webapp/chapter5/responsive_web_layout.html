@@ -7,7 +7,11 @@
     <title>Grid Columns!!</title>
 
     <style>
-    aside { background-color: #E8E8E7; }
+    .row > div { padding: 8px; margin-bottom: 4px; }
+    .col-a { background-color: #d9edf7; border: 1px solid #bce8f1; }
+    .col-b { background-color: #dff0d8; border: 1px solid #d6e9c6; }
+    .col-c { background-color: #fcf8e3; border: 1px solid #faebcc; }
+    .label-row { background: #555; color: #fff; padding: 6px 8px; margin: 16px 0 4px; font-weight: bold; }
   </style>
 
     <!-- Bootstrap -->
@@ -25,7 +29,9 @@
     <script src="../js/tools.js"></script>
 </head>
 <body>
-<h1>Response Web Layout</h1>
+<h1>Responsive Web Layout</h1>
+<p>These columns use multiple breakpoint classes so their widths change at each screen size. Resize your browser slowly from wide to narrow to watch the layout adapt.</p>
+<p>Breakpoints in Bootstrap 3: <strong>xs</strong> &lt;768px | <strong>sm</strong> ≥768px | <strong>md</strong> ≥992px | <strong>lg</strong> ≥1200px</p>
 
 <p>
 <div id="viewPortSizeDisplay">
@@ -33,21 +39,33 @@
 </div>
 <script>printViewPortSize();</script>
 </p>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1">Column one</div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1">Column two</div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1">Column three</div>
-
-    </div>
-</div>
-
 
 <div class="container">
+    <p class="label-row">Three columns: col-sm-6 col-md-4 col-lg-3 col-lg-offset-1</p>
+    <p>
+        <strong>sm (≥768px):</strong> each column is col-sm-6 (half width) — only 2 fit per row, so col 3 wraps.<br>
+        <strong>md (≥992px):</strong> each column is col-md-4 (one third) — all 3 fit side by side.<br>
+        <strong>lg (≥1200px):</strong> each column is col-lg-3 (one quarter) with col-lg-offset-1 (one column gap to the left) — the offset adds visual separation but also means 3×(3+1)=12, perfectly filling the row.
+    </p>
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1">Column one</div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1">Column two</div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1">Column three</div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1 col-a">
+            <strong>Column 1</strong><br>
+            sm: half-width (col-sm-6)<br>
+            md: one third (col-md-4)<br>
+            lg: one quarter + 1-col offset (col-lg-3 col-lg-offset-1)
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1 col-b">
+            <strong>Column 2</strong><br>
+            sm: half-width (col-sm-6)<br>
+            md: one third (col-md-4)<br>
+            lg: one quarter + 1-col offset (col-lg-3 col-lg-offset-1)
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-lg-offset-1 col-c">
+            <strong>Column 3</strong><br>
+            sm: wraps to next line (2 × col-sm-6 already fills the row)<br>
+            md: one third (col-md-4)<br>
+            lg: one quarter + 1-col offset (col-lg-3 col-lg-offset-1)
+        </div>
     </div>
 </div>
 

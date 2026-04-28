@@ -7,7 +7,11 @@
     <title>Grid Columns!!</title>
 
     <style>
-    aside { background-color: #E8E8E7; }
+    aside   { background-color: #d9edf7; border: 1px solid #bce8f1; padding: 8px; }
+    section.row > section,
+    .row > div { background-color: #dff0d8; border: 1px solid #d6e9c6; padding: 8px; margin-bottom: 4px; }
+    .label-row { background: #555; color: #fff; padding: 6px 8px; margin: 16px 0 4px; font-weight: bold; }
+    .offset-space { background-color: #fcf8e3; border: 1px dashed #f0ad4e; }
   </style>
 
     <!-- Bootstrap -->
@@ -25,7 +29,8 @@
     <script src="../js/tools.js"></script>
 </head>
 <body>
-<h1>Offsetting, Ordering and Nesting Columns</h1>
+<h1>Offsetting and Ordering Columns</h1>
+<p>Two techniques for controlling column position beyond simple left-to-right flow: <strong>offsets</strong> add blank space to the left of a column; <strong>push/pull</strong> reorders columns visually without changing the HTML source order.</p>
 
 <p>
 <div id="viewPortSizeDisplay">
@@ -33,27 +38,41 @@
 </div>
 <script>printViewPortSize();</script>
 </p>
+
 <div class="container">
 
+    <p class="label-row">Offsetting — col-md-offset-N adds N empty columns of space to the left</p>
+    <p>Row 1: col-md-5 + col-md-6 = 11 columns. The gap on the right is just unused space (1/12 of the row).</p>
     <section class="row">
-        <aside class="col-md-5"><h2>five columns wide</h2></aside>
-        <section class="col-md-6"><h2>six columns wide not offset</h2></section>
+        <aside class="col-md-5"><h2>col-md-5</h2><p>Five columns wide. No offset.</p></aside>
+        <section class="col-md-6"><h2>col-md-6 (no offset)</h2><p>Six columns wide, sits immediately after col 1. 5+6=11, leaving 1 empty on the right.</p></section>
     </section>
+
+    <p>Row 2: same columns, but <code>col-md-offset-1</code> pushes the second column one unit right. Now 5+1+6=12 — fills the full row with a deliberate gap.</p>
     <section class="row">
-        <aside class="col-md-5"><h2>five columns wide</h2></aside>
-        <section class="col-md-6 col-md-offset-1"><h2>six columns wide offset one</h2></section>
+        <aside class="col-md-5"><h2>col-md-5</h2><p>Five columns wide. No offset.</p></aside>
+        <section class="col-md-6 col-md-offset-1"><h2>col-md-6 col-md-offset-1</h2><p>Offset by 1 column. The dashed yellow gap to the left is the offset space.</p></section>
     </section>
+
 </div>
 
 <div class="container">
+
+    <p class="label-row">Ordering — col-md-push-N and col-md-pull-N swap column order visually</p>
+    <p>In the HTML, the wide column (8) comes first and the narrow column (4) comes second. Push/pull lets you flip them on screen without changing the source order — useful for SEO or accessibility where content order matters.</p>
+
+    <p><strong>Before push/pull</strong> — HTML order matches visual order:</p>
     <div class="row">
-        <div class="col-md-8">The first column is eight wide, not changed.</div>
-        <div class="col-md-4">The second column is four wide, not changed</div>
+        <div class="col-md-8"><strong>HTML order: 1st.</strong> col-md-8 — wide column on the left.</div>
+        <div class="col-md-4"><strong>HTML order: 2nd.</strong> col-md-4 — narrow column on the right.</div>
     </div>
+
+    <p><strong>After push/pull</strong> — same HTML order, but columns swap visually:</p>
     <div class="row">
-        <div class="col-md-8 col-md-push-4">The first column is eight wide, pushed over four.</div>
-        <div class="col-md-4 col-md-pull-8">The second column is four wide, pulled back eight.</div>
+        <div class="col-md-8 col-md-push-4"><strong>HTML order: 1st, but visually RIGHT.</strong> col-md-push-4 shifts this 4 units to the right.</div>
+        <div class="col-md-4 col-md-pull-8"><strong>HTML order: 2nd, but visually LEFT.</strong> col-md-pull-8 shifts this 8 units to the left.</div>
     </div>
+
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
