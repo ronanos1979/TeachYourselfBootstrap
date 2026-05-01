@@ -3,6 +3,7 @@ TeachYourselfBootstrap
 
 ## About
 This is files created by Ronan while reading through the Teach Yourself Bootstrap in 24 hours book.
+The official github source of book is available here: https://github.com/htmljenn/Teach-Yourself-Bootstrap-Code-Samples
 
 ### BootStrap Version
 
