@@ -49,3 +49,13 @@ The rule of thirds divides a webpage into a 3×3 grid, and places key elements a
 
 ### Typography
 Give me 2 line answer for typography7:47 AMClaude responded: Typography in web design is the practice of arranging and styling text — choosing fonts, sizes, spacing, and hierarchy — to make content readable and visually …Typography in web design is the practice of arranging and styling text — choosing fonts, sizes, spacing, and hierarchy — to make content readable and visually appealing. It shapes how users experience and navigate written information on a webpage.
+
+### Table Style
+#### Table condensed
+This reduces the cell padding making the table more compact.
+
+### Screen Readers
+Use the sr-only class to define text that displays only on screenreaders. E.g. 
+```
+<td class="warning"><span class="sr-only">Warning: <span>Sr Director of Engineering</td>
+```
