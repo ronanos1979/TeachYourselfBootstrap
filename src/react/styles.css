@@ -1,0 +1,242 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.hero {
+  background: linear-gradient(135deg, #cc0000 0%, #0033cc 100%);
+  color: #fff;
+  padding: 60px 0 40px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+
+.hero a {
+  color: #f8c;
+}
+
+.chapter-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.chapter-card .card-header {
+  background-color: #cc0000;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.chapter-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chapter-card ul li {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 20px;
+}
+
+.chapter-card ul li:last-child {
+  border-bottom: none;
+}
+
+.chapter-card ul li a {
+  color: #003399;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.chapter-card ul li a:hover {
+  text-decoration: underline;
+  color: #0055ff;
+}
+
+.chapter-card ul li .desc {
+  color: #777;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+.navbar-default {
+  background-color: #003399;
+  border-color: #002277;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #ccd9ff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+}
+
+footer {
+  background-color: #002277;
+  color: #ccd9ff;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #99bbff;
+}
+
+.navbar-nav .dropdown-menu .divider {
+  margin: 6px 0;
+}
+
+.chapter-page {
+  padding-bottom: 30px;
+}
+
+.show-grid {
+  margin-bottom: 15px;
+}
+
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86, 61, 124, .2);
+}
+
+.viewport-size {
+  color: #555;
+}
+
+.label-row {
+  background: #555;
+  color: #fff;
+  padding: 6px 8px;
+  margin: 16px 0 4px;
+  font-weight: bold;
+}
+
+.chapter5-page .clearfix-demo [class*="col-"] {
+  min-height: 30px;
+}
+
+.chapter5-page .col1 {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.chapter5-page .col2 {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.chapter5-page .col3 {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.chapter5-page .col4 {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.column-demo aside,
+.offset-demo aside {
+  background-color: #d9edf7;
+  border: 1px solid #bce8f1;
+  padding: 8px;
+}
+
+.column-demo article,
+.offset-demo section,
+.offset-demo div,
+.grid-column-demo > * {
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.grid-column-demo aside {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.grid-column-demo h2,
+.offset-demo h2,
+.column-demo h2 {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.responsive-demo > div {
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.responsive-demo .col-a {
+  background-color: #d9edf7;
+  border: 1px solid #bce8f1;
+}
+
+.responsive-demo .col-b {
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+.responsive-demo .col-c {
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+}
+
+.labels-page .label {
+  box-shadow: 2px 2px 2px #dfdfdf;
+  border: medium dotted #fff;
+}
+
+.labels-page .label-default {
+  background-image: linear-gradient(180deg, rgba(153, 153, 153, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  color: #000;
+}
+
+.jumbotron-page {
+  max-width: 730px;
+}
+
+.typography-page .starter-template,
+.tables-page .starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.typography-page #mainhead {
+  background-image: url('https://placehold.co/458x87/aaaaaa/ffffff?text=Headline');
+  background-repeat: no-repeat;
+  width: 458px;
+  height: 76px;
+}
+
+.typography-page .width-30 {
+  width: 30%;
+}
+
+.tables-page .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #d6adfa;
+}
