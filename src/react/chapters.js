@@ -5,9 +5,10 @@ export const chapters = [
     links: [
       {
         href: '/react/chapter9/forms',
-        label: 'Forms',
-        description: 'Forms',
+        label: 'Forms via REACT',
+        description: 'Forms via REACT',
       },
+      { href: '/chapter9/forms.html', label: 'Forms Static HTML' },
     ],
   },
   {
@@ -19,6 +20,7 @@ export const chapters = [
         label: 'Styling Tables',
         description: 'Keeping tables reponsive.',
       },
+      { href: '/chapter8/tables.html', label: 'Styling Tables Static HTML' },
     ],
   },
   {
@@ -30,6 +32,7 @@ export const chapters = [
         label: 'Some Typography',
         description: 'The display of text and typographic elements.',
       },
+      { href: '/chapter7/typography.html', label: 'Some Typography Static HTML' },
     ],
   },
   {
@@ -46,6 +49,8 @@ export const chapters = [
         label: 'A Jumbotron',
         description: 'A Jumbotron page.',
       },
+      { href: '/chapter6/jumbotron.html', label: 'A Jumbotron Static HTML' },
+      { href: '/chapter6/a_label_path_with_stylesheet.html', label: 'A Label Page Static HTML' },
     ],
   },
   {
@@ -60,6 +65,11 @@ export const chapters = [
         label: 'Offsetting, Ordering & Nesting Columns',
       },
       { href: '/react/chapter5/responsive-web-layout', label: 'Responsive Web Layout' },
+      { href: '/chapter5/clearfix_problem1.html', label: 'Clearfix Problem Static HTML' },
+      { href: '/chapter5/grid_columns.html', label: 'Grid Columns Static HTML' },
+      { href: '/chapter5/offsetting_ordering_and_nesting_columns.html', label: 'Offsetting, Ordering & Nesting Columns Static HTML' },
+      { href: '/chapter5/responsive_web_layout.html', label: 'Responsive Web Layout Static HTML' },
+      { href: '/chapter5/three_column_layout.html', label: 'Three Column Layout Static HTML' },
     ],
   },
   {
@@ -88,6 +98,8 @@ export const chapters = [
     title: 'Chapter 2 - The Grid',
     links: [
       { href: '/react/chapter2/grid', label: 'Grid' },
+      { href: '/chapter2/grid.html', label: 'Grid Static HTML' },
     ],
+
   },
 ];

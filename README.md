@@ -15,6 +15,11 @@ I tried Bootstrap 5.X but the themes were different so I reverted to the out of 
 Run with the following commands
 
 ```
+npm run dev
+```
+
+Alternatively the old gretty config
+```
 gradlew appRun
 ```
 
