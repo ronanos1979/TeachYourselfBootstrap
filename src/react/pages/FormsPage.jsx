@@ -66,14 +66,15 @@ const contactTextFields = [
     label: 'City:',
     placeholder: 'City',
   },
-  {
-    id: 'zip',
-    label: 'Zip Code:',
-    placeholder: 'Zip Code',
-    inputMode: 'numeric',
-    pattern: '^\\d{5}(-\\d{4})?$',
-  },
 ];
+
+const zipField = {
+  id: 'zip',
+  label: 'Zip Code:',
+  placeholder: 'Zip Code',
+  inputMode: 'numeric',
+  pattern: '^\\d{5}(-\\d{4})?$',
+};
 
 const contactSelectFields = [
   {
@@ -86,6 +87,21 @@ const contactSelectFields = [
     label: 'Country:',
     options: countries,
     defaultValue: 'US',
+  },
+];
+
+const menuOptions = ['pick one', 'one', 'two', 'three'];
+
+const sizeInputs = [
+  {
+    id: 'textField1',
+    className: 'form-control input-lg',
+    label: 'Large text field',
+  },
+  {
+    id: 'textField2',
+    className: 'form-control input-sm',
+    label: 'Small text field',
   },
 ];
 
@@ -378,6 +394,235 @@ function CheckboxAndRadioExamples() {
   );
 }
 
+function DropdownMenus() {
+  return (
+    <section className="chapter-9-dropdown-menus">
+      <div className="form-group">
+        <label className="sr-only" htmlFor="dropdown">
+          Dropdown menu
+        </label>
+        <select className="form-control" id="dropdown">
+          {menuOptions.map(option => (
+            <option key={option}>{option}</option>
+          ))}
+        </select>
+      </div>
+
+      <p>Here is one with a reset done for rounded corners in most browsers</p>
+
+      <div className="form-group">
+        <label className="sr-only" htmlFor="myMenu">
+          Dropdown menu with reset corners
+        </label>
+        <select className="form-control" id="myMenu">
+          {menuOptions.map(option => (
+            <option key={option}>{option}</option>
+          ))}
+        </select>
+      </div>
+    </section>
+  );
+}
+
+function SizingFormControls() {
+  return (
+    <section className="chapter-9-sizing-form-controls">
+      <h2>Sizing Form controls</h2>
+
+      {sizeInputs.map(input => (
+        <div className="form-group" key={input.id}>
+          <label className="sr-only" htmlFor={input.id}>
+            {input.label}
+          </label>
+          <input className={input.className} id={input.id} type="text" />
+        </div>
+      ))}
+
+      <div className="form-group form-group-lg">
+        <label className="sr-only" htmlFor="textField3">
+          Large form group text field
+        </label>
+        <input className="form-control" id="textField3" type="text" />
+        <p>More Form Group implemented different using form-group-lg</p>
+      </div>
+
+      <div className="form-group form-group-sm">
+        <label className="sr-only" htmlFor="textField4">
+          Small form group text field
+        </label>
+        <input className="form-control" id="textField4" type="text" />
+        <p>More Form Group implemented different using form-group-sm</p>
+      </div>
+    </section>
+  );
+}
+
+function HelpBlocks() {
+  return (
+    <section className="chapter-9-help-blocks">
+      <span className="help-block" id="helpfield">
+        This text describes a form field.
+      </span>
+      <label className="sr-only" htmlFor="inputWithHelpBlock">
+        Input with help block
+      </label>
+      <input
+        aria-describedby="helpfield"
+        className="form-control"
+        id="inputWithHelpBlock"
+        type="text"
+      />
+    </section>
+  );
+}
+
+function BasicInputGroups() {
+  return (
+    <section className="chapter9-basic-input-groups">
+      <p>Basic Input Groups</p>
+
+      <form action="#" className="form-inline">
+        <div className="form-group">
+          <div className="input-group">
+            <label className="sr-only" htmlFor="cost">
+              Amount
+            </label>
+            <div className="input-group-addon">$</div>
+            <input className="form-control" id="cost" type="number" required placeholder="Amount" />
+            <div className="input-group-addon">.00</div>
+          </div>
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function UserAddon({ id, inputGroupClass = '' }) {
+  return (
+    <div className={`input-group${inputGroupClass}`}>
+      <label className="sr-only" htmlFor={id}>
+        Username
+      </label>
+      <span className="input-group-addon">
+        <span aria-hidden="true" className="glyphicon glyphicon-user" />
+      </span>
+      <input className="form-control" id={id} type="text" required placeholder="Username" />
+    </div>
+  );
+}
+
+function DifferentSizeInputGroups() {
+  return (
+    <section className="chapter9-different-size-input-groups">
+      <p>Different Size Input Groups</p>
+
+      <div className="form-group">
+        <UserAddon id="email3" inputGroupClass=" input-group-lg" />
+      </div>
+
+      <div className="form-group">
+        <UserAddon id="email4" />
+      </div>
+
+      <div className="form-group">
+        <UserAddon id="email5" inputGroupClass=" input-group-sm" />
+      </div>
+    </section>
+  );
+}
+
+function FancyAddons() {
+  return (
+    <section className="chapter9-fancy-addons">
+      <div className="row">
+        <div className="col-lg-6">
+          <div className="input-group">
+            <span className="input-group-addon">
+              <input id="other" type="checkbox" aria-label="Other" value="other" />
+            </span>
+            <input
+              aria-label="Other Text"
+              className="form-control"
+              id="otherText"
+              placeholder="other text"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div className="col-lg-6">
+          <div className="input-group">
+            <span className="input-group-addon">
+              <input id="other2" type="radio" aria-label="Other 2" value="other2" />
+            </span>
+            <input
+              aria-label="Other Text 2"
+              className="form-control"
+              id="otherText2"
+              placeholder="other text"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DisabledAndReadonlyStates() {
+  return (
+    <section className="chapter9-disabled-and-readonly-states">
+      <p>Disabled and Read Only States</p>
+
+      <div className="form-group">
+        <label className="sr-only" htmlFor="textField5">
+          Disabled text field
+        </label>
+        <input className="form-control" id="textField5" type="text" disabled />
+      </div>
+
+      <div className="form-group">
+        <label className="sr-only" htmlFor="textField6">
+          Read only text field
+        </label>
+        <input className="form-control" id="textField6" type="text" readOnly />
+      </div>
+    </section>
+  );
+}
+
+function ValidationStates() {
+  return (
+    <section className="chapter9-validation-states">
+      <form>
+        <div className="form-group has-success">
+          <label htmlFor="textSuccess">Success</label>
+          <input className="form-control" id="textSuccess" type="text" placeholder="Success" />
+        </div>
+
+        <div className="form-group has-warning">
+          <label htmlFor="textWarning">Warning</label>
+          <input className="form-control" id="textWarning" type="text" placeholder="Warning" />
+        </div>
+
+        <div className="form-group has-error">
+          <label htmlFor="textError">Error</label>
+          <input className="form-control" id="textError" type="text" placeholder="Error" />
+        </div>
+
+        <div className="form-group has-success has-feedback">
+          <label htmlFor="textSuccess2">Success</label>
+          <input className="form-control" id="textSuccess2" type="text" placeholder="Success" />
+          <span
+            aria-hidden="true"
+            className="glyphicon glyphicon-ok form-control-feedback"
+          />
+        </div>
+      </form>
+    </section>
+  );
+}
+
 export default function FormsPage() {
   return (
     <main className="container chapter-page chapter9-page">
@@ -396,9 +641,9 @@ export default function FormsPage() {
             <TextInput key={field.id} {...field} />
           ))}
 
-          {contactSelectFields.map(field => (
-            <SelectInput key={field.id} {...field} />
-          ))}
+          <SelectInput {...contactSelectFields[0]} />
+          <TextInput {...zipField} />
+          <SelectInput {...contactSelectFields[1]} />
 
           <div className="form-group">
             <div className="col-sm-offset-3 col-sm-9">
@@ -414,6 +659,14 @@ export default function FormsPage() {
       <TextAreaExamples />
       <VariousInputFields />
       <CheckboxAndRadioExamples />
+      <DropdownMenus />
+      <SizingFormControls />
+      <HelpBlocks />
+      <BasicInputGroups />
+      <DifferentSizeInputGroups />
+      <FancyAddons />
+      <DisabledAndReadonlyStates />
+      <ValidationStates />
     </main>
   );
 }
