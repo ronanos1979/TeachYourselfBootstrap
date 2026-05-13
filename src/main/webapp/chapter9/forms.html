@@ -17,225 +17,377 @@
     <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
     </script>
     <![endif]-->
+
+    <style>
+        #myMenu {
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+        #formField:focus {
+            border-color: #7B66E9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(170, 158, 232,0.5);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.75), 0 0 8px rgba(170,158,232,0.75);
+        }
+    </style>
 </head>
 <body>
 
+<div class="container">
 
-<div class="chapter9">
-    <h2>Forms</h2>
-    <p>HTML forms are used to collect user input. They can include various types of input fields, such as text boxes,
-        radio buttons, checkboxes, and dropdown lists. Forms also support validation to ensure that the data entered by
-        the user meets certain criteria before it is submitted.</p>
+    <div class="chapter9">
+        <h2>Forms</h2>
+        <p>HTML forms are used to collect user input. They can include various types of input fields, such as text
+            boxes,
+            radio buttons, checkboxes, and dropdown lists. Forms also support validation to ensure that the data entered
+            by
+            the user meets certain criteria before it is submitted.</p>
 
-    <form action="#" class="form-horizontal">
-        <div class="form-group">
-            <label for="firstName" class="col-sm-3 control-label">First Name:</label>
-            <div class="col-sm-9">
-                <input type="text" autofocus required id="firstName" placeholder="First Name"><br/>
+        <form action="#" class="form-horizontal">
+            <div class="form-group">
+                <label for="firstName" class="col-sm-3 control-label">First Name:</label>
+                <div class="col-sm-9">
+                    <input type="text" autofocus required id="firstName" placeholder="First Name"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="lastName" class="col-sm-3 control-label">Last Name:</label>
-            <div class="col-sm-9">
-                <input type="text" required id="lastName" placeholder="Last Name"><br/>
+            <div class="form-group">
+                <label for="lastName" class="col-sm-3 control-label">Last Name:</label>
+                <div class="col-sm-9">
+                    <input type="text" required id="lastName" placeholder="Last Name"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Email Address:</label>
-            <div class="col-sm-9">
-                <input type="email" required id="email" placeholder="Email Address"><br/>
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email Address:</label>
+                <div class="col-sm-9">
+                    <input type="email" required id="email" placeholder="Email Address"><br>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="homePhone" class="col-sm-3 control-label">Home Phone:</label>
-            <div class="col-sm-9">
-                <input type="tel" id="homePhone" placeholder="Home Phone"
-                       pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"><br/>
+            <div class="form-group">
+                <label for="homePhone" class="col-sm-3 control-label">Home Phone:</label>
+                <div class="col-sm-9">
+                    <input type="tel" id="homePhone" placeholder="Home Phone"
+                           pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="workPhone" class="col-sm-3 control-label">Work Phone:</label>
-            <div class="col-sm-9">
-                <input type="tel" id="workPhone" placeholder="Work Phone"
-                       pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"><br/>
+            <div class="form-group">
+                <label for="workPhone" class="col-sm-3 control-label">Work Phone:</label>
+                <div class="col-sm-9">
+                    <input type="tel" id="workPhone" placeholder="Work Phone"
+                           pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="url" class="col-sm-3 control-label">URL:</label>
-            <div class="col-sm-9">
-                <input type="url" id="url" placeholder="URL"><br/>
+            <div class="form-group">
+                <label for="url" class="col-sm-3 control-label">URL:</label>
+                <div class="col-sm-9">
+                    <input type="url" id="url" placeholder="URL"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="address1" class="col-sm-3 control-label">Address:</label>
-            <div class="col-sm-9">
-                <input type="text" id="address1" placeholder="Address (line 1)"><br/>
+            <div class="form-group">
+                <label for="address1" class="col-sm-3 control-label">Address:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="address1" placeholder="Address (line 1)"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="address2" class="col-sm-3 control-label">Address (line 2):</label>
-            <div class="col-sm-9">
-                <input type="text" id="address2" placeholder="Address (line 2)"><br/>
+            <div class="form-group">
+                <label for="address2" class="col-sm-3 control-label">Address (line 2):</label>
+                <div class="col-sm-9">
+                    <input type="text" id="address2" placeholder="Address (line 2)"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="city" class="col-sm-3 control-label">City:</label>
-            <div class="col-sm-9">
-                <input type="text" id="city" placeholder="City"><br/>
+            <div class="form-group">
+                <label for="city" class="col-sm-3 control-label">City:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="city" placeholder="City"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="state" class="col-sm-3 control-label">State:</label>
-            <div class="col-sm-9">
-                <select id="state">
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <!-- Add more states as needed -->
-                </select><br/>
+            <div class="form-group">
+                <label for="state" class="col-sm-3 control-label">State:</label>
+                <div class="col-sm-9">
+                    <select id="state">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <!-- Add more states as needed -->
+                    </select><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="zip" class="col-sm-3 control-label">Zip Code:</label>
-            <div class="col-sm-9">
-                <input type="number" id="zip" placeholder="Zip Code" pattern="^\d{5}(-\d{4})?$"><br/>
+            <div class="form-group">
+                <label for="zip" class="col-sm-3 control-label">Zip Code:</label>
+                <div class="col-sm-9">
+                    <input type="number" id="zip" placeholder="Zip Code" pattern="^\d{5}(-\d{4})?$"><br/>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="country" class="col-sm-3 control-label">Country:</label>
-            <div class="col-sm-9">
-                <select id="country">
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="MX">Mexico</option>
-                    <!-- Add more countries as needed -->
-                </select><br/>
+            <div class="form-group">
+                <label for="country" class="col-sm-3 control-label">Country:</label>
+                <div class="col-sm-9">
+                    <select id="country">
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="MX">Mexico</option>
+                        <!-- Add more countries as needed -->
+                    </select><br/>
+                </div>
             </div>
-        </div>
-        <input type="submit" value="Contact">
+            <input type="submit" value="Contact">
 
-    </form>
-</div>
+        </form>
+    </div>
 
-<div class="chapter-9-horizontal-form">
-    <p>This is a form that is horizontal using form-inline</p>
-    <form action="#" class="form-inline">
-        <div class="form-group">
-            <label class="sr-only" for="email">Email Address</label>
-            <input type="email" required id="email" placeholder="Email Address" class="form-control">
-        </div>
-        <div class="form-group">
-            <label class="sr-only" for="password">Password</label>
-            <input type="password" required id="password" placeholder="Password" class="form-control">
+    <div class="chapter-9-horizontal-form">
+        <p>This is a form that is horizontal using form-inline</p>
+        <form action="#" class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="email">Email Address</label>
+                <input type="email" required id="email2" placeholder="Email Address" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" required id="password" placeholder="Password" class="form-control">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+        </form>
+    </div>
+
+    <div class="chapter-9-text-area">
+        <p>This is a text area</p>
+        <textarea id="textAreaField" rows="4" class="form-control"></textarea>
+
+        <textarea id="textAreaFieldStatic" rows="4"
+                  class="form-control-static">Non editable form control text area</textarea>
+
+        <p class="form-control-static">Non editable form control text area</p>
+    </div>
+
+
+    <div class="chapter-9-various-input-fields">
+        <p>The various input fields</p>
+        <input type="checkbox" id="checkboxField"> Checkbox Field<br/>
+        <input type="color" id="colorField" placeholder="Color Field" class="form-control"><br/>
+        <input type="date" id="dateField" placeholder="Date Field" class="form-control"><br/>
+        <input type="datetime" id="dateTimeField" placeholder="Date Time Field" class="form-control"><br/>
+        <input type="datetime-local" id="dateTimeFieldLocal" placeholder="Date Time Field Local"
+               class="form-control"><br/>
+        <input type="email" id="emailField" placeholder="Email Field" class="form-control"><br/>
+        <input type="month" id="monthField" placeholder="Month Field" class="form-control"><br/>
+        <input type="number" id="numberField" placeholder="Number Field" class="form-control"><br/>
+        <input type="password" id="passwordField" placeholder="Password Field" class="form-control"><br/>
+        <input type="radio" id="radioField1" name="radioGroup"> Radio Field 1<br/>
+        <input type="radio" id="radioField2" name="radioGroup"> Radio Field 2<br/>
+        <input type="search" id="searchField" placeholder="Search Field" class="form-control"><br/>
+        <input type="tel" id="telField" placeholder="Telephone Field" class="form-control"><br/>
+        <input type="text" id="textField" placeholder="Text Field" class="form-control"><br/>
+        <input type="time" id="timeField" placeholder="Time Field" class="form-control"><br/>
+        <input type="url" id="urlField" placeholder="URL Field" class="form-control"><br/>
+        <input type="week" id="weekField" placeholder="Week Field" class="form-control"><br/>
+
+        <input type="range" id="rangeField" placeholder="Range Field" class="form-control"><br/>
+
+        <input type="file" id="fileField" placeholder="File Field" class="form-control"><br/>
+        <input type="hidden" id="hiddenField" value="Hidden Field"><br/>
+        <input type="submit" id="submitButton" value="Submit" class="btn btn-primary"><br/>
+        <input type="reset" id="resetButton" value="Reset" class="btn btn-secondary"><br/>
+        <input type="button" id="buttonField" value="Button Field" class="btn btn-default"><br/>
+
+    </div>
+
+    <div class="chapter-9-checkboxes-and-radio-buttons">
+        <p>Checkboxes and Radio Buttons</p>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="checkbox1"> Checkbox 1
+            </label>
         </div>
         <div class="checkbox">
             <label>
-                <input type="checkbox">Remember me
+                <input type="checkbox" id="checkbox2"> Checkbox 2
             </label>
         </div>
-        <button type="submit" class="btn btn-default">Login</button>
-    </form>
-</div>
+        <div class="checkbox disabled">
+            <label>
+                <input type="checkbox" id="checkbox3" disabled> Checkbox 3
+            </label>
+        </div>
 
-<div class="chapter-9-text-area">
-    <p>This is a text area</p>
-    <textarea id="textAreaField" rows="4" class="form-control"></textarea>
-
-    <textarea id="textAreaFieldStatic" rows="4" class="form-control-static">Non editable form control text area</textarea>
-
-    <p class="form-control-static">Non editable form control text area</p>
-</div>
-
-
-<div class="chapter-9-various-input-fields">
-    <p>The various input fields</p>
-    <input type="checkbox" id="checkboxField"> Checkbox Field<br/>
-    <input type="color" id="colorField" placeholder="Color Field" class="form-control"><br/>
-    <input type="date" id="dateField" placeholder="Date Field" class="form-control"><br/>
-    <input type="datetime" id="dateTimeField" placeholder="Date Time Field" class="form-control"><br/>
-    <input type="datetime-local" id="dateTimeFieldLocal" placeholder="Date Time Field Local" class="form-control"><br/>
-    <input type="email" id="emailField" placeholder="Email Field" class="form-control"><br/>
-    <input type="month" id="monthField" placeholder="Month Field" class="form-control"><br/>
-    <input type="number" id="numberField" placeholder="Number Field" class="form-control"><br/>
-    <input type="password" id="passwordField" placeholder="Password Field" class="form-control"><br/>    
-    <input type="radio" id="radioField1" name="radioGroup"> Radio Field 1<br/>
-    <input type="radio" id="radioField2" name="radioGroup"> Radio Field 2<br/>
-    <input type="search" id="searchField" placeholder="Search Field" class="form-control"><br/>
-    <input type="tel" id="telField" placeholder="Telephone Field" class="form-control"><br/>
-    <input type="text" id="textField" placeholder="Text Field" class="form-control"><br/>
-    <input type="time" id="timeField" placeholder="Time Field" class="form-control"><br/>    
-    <input type="url" id="urlField" placeholder="URL Field" class="form-control"><br/>
-    <input type="week" id="weekField" placeholder="Week Field" class="form-control"><br/>
-    
-    <input type="range" id="rangeField" placeholder="Range Field" class="form-control"><br/>
-
-    <input type="file" id="fileField" placeholder="File Field" class="form-control"><br/>
-    <input type="hidden" id="hiddenField" value="Hidden Field"><br/>
-    <input type="submit" id="submitButton" value="Submit" class="btn btn-primary"><br/>
-    <input type="reset" id="resetButton" value="Reset" class="btn btn-secondary"><br/>
-    <input type="button" id="buttonField" value="Button Field" class="btn btn-default"><br/>
-   
-</div>
-
-<div class="chapter-9-checkboxes-and-radio-buttons">
-    <p>Checkboxes and Radio Buttons</p>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" id="checkbox1"> Checkbox 1
-        </label>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" id="checkbox2"> Checkbox 2
-        </label>
-    </div>
-    <div class="checkbox disabled">
-        <label>
-            <input type="checkbox" id="checkbox3" disabled> Checkbox 3
-        </label>
-    </div>
-
-    <div class="radio">
-        <label>
-            <input type="radio" name="radioGroup" id="radio1"> Radio Button 1
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input type="radio" name="radioGroup" id="radio2"> Radio Button 2
-        </label>
-    </div>
-    <div class="radio disabled">
-        <label>
-            <input type="radio" name="radioGroup" id="radio3" disabled> Radio Button 3
-        </label>
-    </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radioGroup" id="radio1"> Radio Button 1
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="radioGroup" id="radio2"> Radio Button 2
+            </label>
+        </div>
+        <div class="radio disabled">
+            <label>
+                <input type="radio" name="radioGroup" id="radio3" disabled> Radio Button 3
+            </label>
+        </div>
 
 
-    <div class="checkbox-inline">
-        <label>
-            <input type="checkbox" id="checkbox1inline"> Checkbox 1
-        </label>
-    </div>
-    <div class="checkbox-inline">
-        <label>
-            <input type="checkbox" id="checkbox2inline"> Checkbox 2
-        </label>
-    </div>
-    <div class="checkbox-inline disabled">
-        <label>
-            <input type="checkbox" id="checkbox3inline" disabled> Checkbox 3
-        </label>
-    </div>
+        <div class="checkbox-inline">
+            <label>
+                <input type="checkbox" id="checkbox1inline"> Checkbox 1
+            </label>
+        </div>
+        <div class="checkbox-inline">
+            <label>
+                <input type="checkbox" id="checkbox2inline"> Checkbox 2
+            </label>
+        </div>
+        <div class="checkbox-inline disabled">
+            <label>
+                <input type="checkbox" id="checkbox3inline" disabled> Checkbox 3
+            </label>
+        </div>
 
-    <div class="checkbox">
-        
+        <div class="checkbox">
+
             <input type="checkbox" id="checkbox1nolabel" value="value" aria-label="Label for assistive devices">
-        
+
+        </div>
+
     </div>
 
-</div>
+    <div class="chapter-9-dropdown-menus">
+        <select id="dropdown" class="form-control">
+            <option>pick one</option>
+            <option>one</option>
+            <option>two</option>
+            <option>three</option>
+        </select>
+        <p>Here is one with a reset done for rounded corners in most browsers</p>
+        <select id="myMenu" class="form-control">
+            <option>pick one</option>
+            <option>one</option>
+            <option>two</option>
+            <option>three</option>
+        </select>
+    </div>
 
+
+    <div class="chapter-9-sizing-form-controls">
+        <h3>Sizing Form controls</h3>
+        <input type="text" id="textField1" class="form-control input-lg">
+        <input type="text" id="textField2" class="form-control input-sm">
+    </div>
+
+    <div class="form-group form-group-lg">
+        <input type="text" id="textField3">
+        <p>More Form Group implemented different using form-group-lg</p>
+    </div>
+    <div class="form-group form-group-sm">
+        <input type="text" id="textField4">
+        <p>More Form Group implemented different using form-group-sm</p>
+    </div>
+
+    <div class="chapter-9-help-blocks">
+        <span id="helpfield" class="help-block">This text describes a form field.</span>
+        <input type="text" id="inputWithHelpBlock" class="form-control" aria-describedby="helpfield">
+    </div>
+
+    <div class="chapter9-basic-input-groups">
+        <p>Basic Input Groups</p>
+        <form action="#" class="form-inline">
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="cost" class="sr-only">Amount</label>
+                    <div class="input-group-addon">$</div>
+                    <div><input type="number" required id="cost" placeholder="Amount" class="form-control">
+                    </div>
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="chapter9-different-size-input-groups">
+        <p>Different Size Input Groups</p>
+        <p>
+        <div class="input-group input-group-lg">
+            <label for="email3" class="sr-only">Username</label>
+            <span class="input-group-addon">
+            <span class="glyphicon glyphicon-user"></span>
+        </span>
+            <input type="text" required id="email3" placeholder="Username" class="form-control">
+        </div>
+        </p>
+        <p>
+        <div class="input-group">
+            <label for="email4" class="sr-only">Username</label>
+            <span class="input-group-addon">
+            <span class="glyphicon glyphicon-user"></span>
+        </span>
+            <input type="text" required id="email4" placeholder="Username" class="form-control">
+        </div>
+        </p>
+        <p>
+        <div class="input-group input-group-sm">
+            <label for="email5" class="sr-only">Username</label>
+            <span class="input-group-addon">
+            <span class="glyphicon glyphicon-user"></span>
+        </span>
+            <input type="text" required id="email5" placeholder="Username" class="form-control">
+        </div>
+        </p>
+    </div>
+
+    <div class="chapter9-fancy-addons">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" id="other" aria-label="Other" value="other">
+                    </span>
+                    <input type="text" id="otherText" class="form-control" aria-label="Other Text" placeholder="other text">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="radio" id="other2" aria-label="Other 2" value="other2">
+                    </span>
+                    <input type="text" id="otherText2" class="form-control" aria-label="Other Text 2" placeholder="other text">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter9-disabled-and-readonly-states">
+        <p>Disabled and Read Only States</p>
+        <input type="text" class="form-control" id="textField5" disabled>
+        <input type="text" class="form-control" id="textField6" read-only>
+    </div>
+
+    <div class="chapter9-validation-states">
+        <form>
+            <div class="form-group has-success">
+                <label for="textSuccess">Success</label>
+                <input type="text" class="form-control" id="textSuccess" placeholder="Success">
+            </div>
+            <div class="form-group has-warning">
+                <label for="textWarning">Warning</label>
+                <input type="text" class="form-control" id="textWarning" placeholder="Warning">
+            </div>
+            <div class="form-group has-error">
+                <label for="textError">Error</label>
+                <input type="text" class="form-control" id="textError" placeholder="Error">
+            </div>
+            <div class="form-group has-success has-feedback">
+                <label for="textSuccess2">Success</label>
+                <input type="text" class="form-control" id="textSuccess2" placeholder="Success">
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            </div>
+        </form>
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../includes/js/jquery.min.js"></script>
