@@ -12,6 +12,7 @@ import HomePage from '../pages/HomePage.jsx';
 import TablesPage from '../pages/TablesPage.jsx';
 import TypographyPage from '../pages/TypographyPage.jsx';
 import FormsPage from '../pages/FormsPage.jsx';
+import Chapter10Page from '../pages/Chapter10Page.jsx';
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ export default function AppRoutes() {
       <Route path="/react/chapter7/typography" element={<TypographyPage />} />
       <Route path="/react/chapter8/tables" element={<TablesPage />} />
       <Route path="/react/chapter9/forms" element={<FormsPage />} />
+      <Route path="/react/chapter10/images-media-glyphicons" element={<Chapter10Page />} />
     </Routes>
   );
 }

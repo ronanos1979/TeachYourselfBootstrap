@@ -1,15 +1,3 @@
-import { useState, useMemo } from 'react';
-import allIconsData from 'bootstrap-icons/font/bootstrap-icons.json';
-
-const ALL_ICONS = Object.keys(allIconsData);
-
-const glyphicons = [
-  'ok', 'remove', 'plus', 'minus', 'user', 'envelope', 'search', 'star', 'heart',
-  'home', 'lock', 'camera', 'trash', 'pencil', 'download', 'upload', 'warning-sign',
-  'info-sign', 'shopping-cart', 'play', 'pause',
-];
-
-
 
 const states = [
   { value: 'AL', label: 'Alabama' },
@@ -637,88 +625,6 @@ function ValidationStates() {
   );
 }
 
-function GlyphiconStates() {
-  return (
-    <section className="chapter9-glyphicon-states">
-      <p>Glyphicon states</p>
-
-      {glyphicons.map(name => (
-        <div key={name}>
-          <span aria-hidden="true" className={`glyphicon glyphicon-${name}`} />
-          {' '}{`glyphicon-${name}`}
-          <br />
-        </div>
-      ))}
-    </section>
-  );
-}
-
-const COLS = 4;
-
-function BootstrapIcons() {
-  const [search, setSearch] = useState('');
-  const filtered = useMemo(
-    () => search ? ALL_ICONS.filter(n => n.includes(search.toLowerCase())) : ALL_ICONS,
-    [search]
-  );
-
-  const rows = [];
-  for (let i = 0; i < filtered.length; i += COLS) {
-    rows.push(filtered.slice(i, i + COLS));
-  }
-
-  return (
-    <section className="chapter9-icons">
-      <h3>All Bootstrap Icons</h3>
-
-      <div className="panel panel-default">
-        <div className="panel-heading"><strong>Example: pencil icon</strong></div>
-        <div className="panel-body">
-          <p><i className="bi bi-pencil" /> &mdash; rendered with this code:</p>
-          <pre><code>{'<i className="bi bi-pencil"></i>'}</code></pre>
-        </div>
-      </div>
-
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="Search icons..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-        />
-        <span className="help-block">Showing {filtered.length} of {ALL_ICONS.length} icons</span>
-      </div>
-      <div className="table-responsive">
-        <table className="table table-striped table-bordered table-hover table-condensed">
-          <thead>
-            <tr>
-              {Array.from({ length: COLS }, (_, i) => (
-                <th key={i} colSpan={2} style={{ width: `${100 / COLS}%` }}>Icon / Name</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row, i) => (
-              <tr key={i}>
-                {row.map(name => (
-                  <>
-                    <td key={name + '-icon'} style={{ textAlign: 'center', width: '40px' }}>
-                      <i className={`bi bi-${name}`} style={{ fontSize: '1.25rem' }} />
-                    </td>
-                    <td key={name + '-label'}>{name}</td>
-                  </>
-                ))}
-                {row.length < COLS && Array.from({ length: COLS - row.length }, (_, j) => (
-                  <><td key={`empty-icon-${j}`} /><td key={`empty-label-${j}`} /></>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
-  );
-}
 
 export default function FormsPage() {
   return (
@@ -777,8 +683,6 @@ export default function FormsPage() {
       <FancyAddons />
       <DisabledAndReadonlyStates />
       <ValidationStates />
-      <GlyphiconStates />
-      <BootstrapIcons />
     </main>
   );
 }

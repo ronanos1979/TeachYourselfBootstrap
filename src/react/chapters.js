@@ -1,5 +1,17 @@
 export const chapters = [
   {
+    number: 10,
+    title: 'Chapter 10 - Images, Media Objects and Glyphicons',
+    links: [
+      {
+        href: '/react/chapter10/images-media-glyphicons',
+        label: 'Images, Media Objects and Glyphicons',
+        description: 'Images, media objects and glyphicons / bootstrap icons.',
+      },
+      { href: '/chapter10/images_media_glyphicons.html', label: 'Images, Media Objects and Glyphicons Static HTML' },
+    ],
+  },
+  {
     number: 9,
     title: 'Chapter 9 - Forms',
     links: [

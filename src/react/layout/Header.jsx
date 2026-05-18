@@ -74,6 +74,7 @@ export default function Header() {
         <div id="navbar" className="collapse navbar-collapse">
           <ul className="nav navbar-nav">
             <li><Link to="/">Home</Link></li>
+            <li><a href="/static.html">Static Site</a></li>
             {chapterGroups.map(group => (
               <ChapterDropdown group={group} key={group.id} />
             ))}
