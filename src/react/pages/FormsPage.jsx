@@ -1,3 +1,19 @@
+import Toc from '../components/Toc.jsx';
+
+const TOC_ITEMS = [
+  { id: 'inline-login-form', label: 'Horizontal Form / form-inline' },
+  { id: 'text-areas', label: 'Text Areas' },
+  { id: 'various-input-fields', label: 'Various Input Fields' },
+  { id: 'checkboxes-and-radio', label: 'Checkboxes and Radio Buttons' },
+  { id: 'dropdown-menus', label: 'Drop Down Menus' },
+  { id: 'sizing-form-controls', label: 'Sizing Form Controls' },
+  { id: 'help-blocks', label: 'Help Blocks' },
+  { id: 'basic-input-groups', label: 'Basic Input Groups' },
+  { id: 'different-size-input-groups', label: 'Different Size Input Groups' },
+  { id: 'fancy-addons', label: 'Fancy Addons' },
+  { id: 'disabled-and-readonly', label: 'Disabled and Read Only States' },
+  { id: 'validation-states', label: 'Validation States' },
+];
 
 const states = [
   { value: 'AL', label: 'Alabama' },
@@ -213,6 +229,7 @@ function SelectInput({ id, label, options, defaultValue }) {
 function InlineLoginForm() {
   return (
     <section className="chapter-9-horizontal-form">
+      <h3 id="inline-login-form">Horizontal Form / form-inline</h3>
       <p>This is a form that is horizontal using form-inline</p>
 
       <form action="#" className="form-inline">
@@ -259,6 +276,7 @@ function InlineLoginForm() {
 function TextAreaExamples() {
   return (
     <section className="chapter-9-text-area">
+      <h3 id="text-areas">Text Areas</h3>
       <p>This is a text area</p>
 
       <div className="form-group">
@@ -318,6 +336,7 @@ function FieldExample({ field }) {
 function VariousInputFields() {
   return (
     <section className="chapter-9-various-input-fields">
+      <h3 id="various-input-fields">Various Input Fields</h3>
       <p>The various input fields</p>
 
       {inputFieldExamples.map(field => (
@@ -364,6 +383,7 @@ function CheckOption({ option, type, name, inline = false }) {
 function CheckboxAndRadioExamples() {
   return (
     <section className="chapter-9-checkboxes-and-radio-buttons">
+      <h3 id="checkboxes-and-radio">Checkboxes and Radio Buttons</h3>
       <p>Checkboxes and Radio Buttons</p>
 
       {stackedCheckboxes.map(option => (
@@ -398,6 +418,7 @@ function CheckboxAndRadioExamples() {
 function DropdownMenus() {
   return (
     <section className="chapter-9-dropdown-menus">
+      <h3 id="dropdown-menus">Drop Down Menus</h3>
       <div className="form-group">
         <label className="sr-only" htmlFor="dropdown">
           Dropdown menu
@@ -428,7 +449,7 @@ function DropdownMenus() {
 function SizingFormControls() {
   return (
     <section className="chapter-9-sizing-form-controls">
-      <h2>Sizing Form controls</h2>
+      <h3 id="sizing-form-controls">Sizing Form Controls</h3>
 
       {sizeInputs.map(input => (
         <div className="form-group" key={input.id}>
@@ -461,6 +482,7 @@ function SizingFormControls() {
 function HelpBlocks() {
   return (
     <section className="chapter-9-help-blocks">
+      <h3 id="help-blocks">Help Blocks</h3>
       <span className="help-block" id="helpfield">
         This text describes a form field.
       </span>
@@ -480,6 +502,7 @@ function HelpBlocks() {
 function BasicInputGroups() {
   return (
     <section className="chapter9-basic-input-groups">
+      <h3 id="basic-input-groups">Basic Input Groups</h3>
       <p>Basic Input Groups</p>
 
       <form action="#" className="form-inline">
@@ -515,6 +538,7 @@ function UserAddon({ id, inputGroupClass = '' }) {
 function DifferentSizeInputGroups() {
   return (
     <section className="chapter9-different-size-input-groups">
+      <h3 id="different-size-input-groups">Different Size Input Groups</h3>
       <p>Different Size Input Groups</p>
 
       <div className="form-group">
@@ -535,6 +559,7 @@ function DifferentSizeInputGroups() {
 function FancyAddons() {
   return (
     <section className="chapter9-fancy-addons">
+      <h3 id="fancy-addons">Fancy Addons</h3>
       <div className="row">
         <div className="col-lg-6">
           <div className="input-group">
@@ -573,6 +598,7 @@ function FancyAddons() {
 function DisabledAndReadonlyStates() {
   return (
     <section className="chapter9-disabled-and-readonly-states">
+      <h3 id="disabled-and-readonly">Disabled and Read Only States</h3>
       <p>Disabled and Read Only States</p>
 
       <div className="form-group">
@@ -595,6 +621,7 @@ function DisabledAndReadonlyStates() {
 function ValidationStates() {
   return (
     <section className="chapter9-validation-states">
+      <h3 id="validation-states">Validation States</h3>
       <form>
         <div className="form-group has-success">
           <label htmlFor="textSuccess">Success</label>
@@ -644,6 +671,7 @@ export default function FormsPage() {
       `}</style>
       <section className="chapter9">
         <h1>Forms</h1>
+        <Toc items={TOC_ITEMS} />
 
         <p>
           HTML forms are used to collect user input. They can include various types of input fields,

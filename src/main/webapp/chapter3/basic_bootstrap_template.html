@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 template</title>
 
     <!-- Bootstrap -->
@@ -13,17 +13,39 @@
     <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
     <!--[if lt IE 9]>
     <script
-    src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
     </script>
     <![endif]-->
 </head>
 <body>
+<div class="container">
+    <div id="toc"></div>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../includes/js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../includes/js/bootstrap.min.js"></script>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../includes/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../includes/js/bootstrap.min.js"></script>
 </body>
 </html>

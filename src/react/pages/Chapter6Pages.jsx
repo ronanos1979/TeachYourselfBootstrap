@@ -1,7 +1,18 @@
+import Toc from '../components/Toc.jsx';
+
+const LABELS_TOC = [
+  { id: 'labels', label: 'Labels' },
+  { id: 'badges', label: 'Badges' },
+  { id: 'wells', label: 'Wells' },
+  { id: 'panels', label: 'Panels' },
+];
+
 export function LabelsPage() {
   return (
     <main className="container chapter-page labels-page">
       <h1>A Label Bootstrap Page</h1>
+      <Toc items={LABELS_TOC} />
+      <h2 id="labels">Labels</h2>
       <p>
         <span className="label label-default">Default</span>{' '}
         <span className="label label-primary">Primary</span>{' '}
@@ -11,10 +22,10 @@ export function LabelsPage() {
         <span className="label label-danger">Danger</span>
       </p>
 
-      <h1>Badges</h1>
+      <h2 id="badges">Badges</h2>
       <p><a href="#top">Badge e.g. showing number of messages in Inbox <span className="badge">4</span></a></p>
 
-      <h1>Wells</h1>
+      <h2 id="wells">Wells</h2>
       <p>This is standard content.</p>
       <p className="well">This content is inside a well.</p>
       <p className="well well-lg">This content is inside a large well.</p>
@@ -22,7 +33,7 @@ export function LabelsPage() {
       <blockquote>This content is inside a blockquote.</blockquote>
       <div className="well"><blockquote>This content is inside a blockquote inside a well.</blockquote></div>
 
-      <h1>Panels</h1>
+      <h2 id="panels">Panels</h2>
       <div className="panel panel-default">
         <div className="panel-heading">This is a panel heading without a title.</div>
         <div className="panel-body">This content is in a panel.</div>

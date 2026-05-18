@@ -1,47 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Basic Bootstrap Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Basic Bootstrap Page</title>
 
-  <!-- Bootstrap -->
-  <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
-  <!--[if lt IE 9]>
-  <script
-          src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
-  </script>
-  <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
+    <!--[if lt IE 9]>
+    <script
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
 </head>
 <body>
-<h1>A Basic Bootstrap Page</h1>
+<div class="container">
+    <div id="toc"></div>
+    <h1>A Basic Bootstrap Page</h1>
+
+</div>
 
 <p>
-  Lorem <a href="#">ipsum dolor sit</a> amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam. Egestas sed tempus urna et. Id porta nibh venenatis cras sed felis eget velit aliquet. Arcu dui vivamus arcu felis bibendum ut tristique. Magna eget est lorem ipsum dolor. Amet cursus sit amet dictum sit amet justo donec enim. Sed sed risus pretium quam vulputate dignissim suspendisse in. Nulla facilisi nullam vehicula ipsum a arcu. Vitae congue mauris rhoncus aenean vel elit scelerisque.
+    Lorem <a href="#">ipsum dolor sit</a> amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam. Egestas sed tempus urna et. Id porta nibh
+    venenatis cras sed felis eget velit aliquet. Arcu dui vivamus arcu felis bibendum ut tristique. Magna eget est lorem
+    ipsum dolor. Amet cursus sit amet dictum sit amet justo donec enim. Sed sed risus pretium quam vulputate dignissim
+    suspendisse in. Nulla facilisi nullam vehicula ipsum a arcu. Vitae congue mauris rhoncus aenean vel elit
+    scelerisque.
 </p>
 <p>
 
-  Curabitur <a href="#">vitae nunc sed</a>velit dignissim sodales ut eu. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Cursus turpis massa tincidunt dui. Faucibus a pellentesque sit amet porttitor eget dolor. Cursus euismod quis viverra nibh cras pulvinar. Volutpat sed cras ornare arcu. Erat velit scelerisque in dictum. Elementum sagittis vitae et leo duis ut. Arcu felis bibendum ut tristique et egestas quis. Faucibus purus in massa tempor nec feugiat. Dolor morbi non arcu risus quis varius quam quisque id. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Diam quis enim lobortis scelerisque fermentum dui faucibus in. Sagittis vitae et leo duis ut diam quam. Non enim praesent elementum facilisis leo vel fringilla. Risus nec feugiat in fermentum posuere urna. Ut pharetra sit amet aliquam id diam maecenas.
+    Curabitur <a href="#">vitae nunc sed</a>velit dignissim sodales ut eu. Magna etiam tempor orci eu lobortis elementum
+    nibh tellus molestie. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Cursus turpis
+    massa tincidunt dui. Faucibus a pellentesque sit amet porttitor eget dolor. Cursus euismod quis viverra nibh cras
+    pulvinar. Volutpat sed cras ornare arcu. Erat velit scelerisque in dictum. Elementum sagittis vitae et leo duis ut.
+    Arcu felis bibendum ut tristique et egestas quis. Faucibus purus in massa tempor nec feugiat. Dolor morbi non arcu
+    risus quis varius quam quisque id. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Diam quis
+    enim lobortis scelerisque fermentum dui faucibus in. Sagittis vitae et leo duis ut diam quam. Non enim praesent
+    elementum facilisis leo vel fringilla. Risus nec feugiat in fermentum posuere urna. Ut pharetra sit amet aliquam id
+    diam maecenas.
 </p>
 
 <ul>
-  <li><a href="#">Loren ipsum</a> something</li>
-  <li>Another one</li>
-  <li>More text</li>
+    <li><a href="#">Loren ipsum</a> something</li>
+    <li>Another one</li>
+    <li>More text</li>
 </ul>
 
 <dl>
-  <dt>Prion <a href="#">placerat</a> ligula ut comodo</dt>
-  <dd>something else</dd>
-  <dt>I dont know what</dt>
-  <dd>Another but more here</dd>
+    <dt>Prion <a href="#">placerat</a> ligula ut comodo</dt>
+    <dd>something else</dd>
+    <dt>I dont know what</dt>
+    <dd>Another but more here</dd>
 </dl>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../includes/js/jquery.min.js"></script>

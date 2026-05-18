@@ -11,74 +11,98 @@
 
     <![endif]-->
     <style>
-        .label{
+        .label {
             -webkit-box-shadow: 2px 2px 2px #dfdfdf;
             box-shadow: 2px 2px 2px #dfdfdf;
             border: medium dotted #fff;
         }
 
         .label-default {
-            background-image: -webkit-linear-gradier(270deg,rgba(153,153,153,1.00) 0%, rgba(255,255,255,1.00) 100%);
-            background-image: linear-gradient(180deg,rgba(153,153,153,1.00) 0%,rgba(255,255,255,1.00) 100%);
+            background-image: -webkit-linear-gradier(270deg, rgba(153, 153, 153, 1.00) 0%, rgba(255, 255, 255, 1.00) 100%);
+            background-image: linear-gradient(180deg, rgba(153, 153, 153, 1.00) 0%, rgba(255, 255, 255, 1.00) 100%);
             color: #000000;
         }
     </style>
 </head>
 <body>
-<h1>A Label Bootstrap Page</h1>
+<div class="container">
+    <div id="toc"></div>
+    <h1>A Label Bootstrap Page</h1>
 
-<p>
-    <span class="label label-default">Default</span>
-    <span class="label label-primary">Primary</span>
-    <span class="label label-success">Success</span>
-    <span class="label label-info">Info</span>
-    <span class="label label-warning">Warning</span>
-    <span class="label label-danger">Danger</span>
-</p>
 
-<h1>Badges</h1>
-<a href="#top">Badge e.g. showing number of messages in Inbox <span class="badge">4</span></a>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="../includes/js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../includes/js/bootstrap.min.js"></script>
+    <p>
+        <span class="label label-default">Default</span>
+        <span class="label label-primary">Primary</span>
+        <span class="label label-success">Success</span>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+    </p>
 
-<h1>Wells</h1>
-<p>This is standard content.</p>
-<p class="well">This content is inside a well.</p>
-<p class="well well-lg">This content is inside a large well.</p>
-<p class="well well-sm">This content is inside a small well.</p>
-<blockquote>This content is inside a blockquote.</blockquote>
-<div class="well"><blockquote>This content is inside a blockquote inside a well.</blockquote></div>
+    <h1>Badges</h1>
+    <a href="#top">Badge e.g. showing number of messages in Inbox <span class="badge">4</span></a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var headings = document.querySelectorAll('.container h1');
+            if (!headings.length) return;
+            var items = Array.from(headings).map(function (h) {
+                if (!h.id) {
+                    h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                }
+                return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+            });
+            document.getElementById('toc').innerHTML =
+                '<div class="panel panel-default">' +
+                '<div class="panel-heading"><strong>Contents</strong></div>' +
+                '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+                '</div>';
+        });
+    </script>
 
-<h1>Panels</h1>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        This is a panel heading without a title.
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../includes/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../includes/js/bootstrap.min.js"></script>
+
+    <h1>Wells</h1>
+    <p>This is standard content.</p>
+    <p class="well">This content is inside a well.</p>
+    <p class="well well-lg">This content is inside a large well.</p>
+    <p class="well well-sm">This content is inside a small well.</p>
+    <blockquote>This content is inside a blockquote.</blockquote>
+    <div class="well">
+        <blockquote>This content is inside a blockquote inside a well.</blockquote>
     </div>
-    <div class="panel-body">
-        This content is in a panel.
+
+    <h1>Panels</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            This is a panel heading without a title.
+        </div>
+        <div class="panel-body">
+            This content is in a panel.
+        </div>
     </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            This content is in a panel.
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            This content is in a panel.
+        </div>
+        <div class="panel-footer">
+            This content is in a panel footer.
+        </div>
+    </div>
+
 </div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
-    </div>
-    <div class="panel-body">
-        This content is in a panel.
-    </div>
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-body">
-        This content is in a panel.
-    </div>
-    <div class="panel-footer">
-        This content is in a panel footer.
-    </div>
-</div>
-
 </body>
 </html>

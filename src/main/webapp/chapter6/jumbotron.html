@@ -19,7 +19,10 @@
     </style>
 </head>
 <body>
+<div class="container">
+    <div id="toc"></div>
 <h1>A Label Bootstrap Page</h1>
+
 
 <div class="jumbotron">
     <h1>This is a Jumbotron</h1>
@@ -27,5 +30,25 @@
     <p><a class="btn btn-primary btn-lg" href="# role="button">Learn more</a></p>
 </div>
 
-</body>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var headings = document.querySelectorAll('.container h1');
+            if (!headings.length) return;
+            var items = Array.from(headings).map(function (h) {
+                if (!h.id) {
+                    h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                }
+                return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+            });
+            document.getElementById('toc').innerHTML =
+                '<div class="panel panel-default">' +
+                '<div class="panel-heading"><strong>Contents</strong></div>' +
+                '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+                '</div>';
+        });
+    </script>
+
+    </body>
 </html>

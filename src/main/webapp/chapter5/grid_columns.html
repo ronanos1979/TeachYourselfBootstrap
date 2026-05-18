@@ -1,135 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grid Columns!!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid Columns!!</title>
 
-  <style>
-    aside   { background-color: #d9edf7; border: 1px solid #bce8f1; }
-    section.row > section,
-    section.row > article { background-color: #dff0d8; border: 1px solid #d6e9c6; }
-    .row > div { background-color: #fcf8e3; border: 1px solid #faebcc; margin-bottom: 4px; }
-    h2 { font-size: 14px; margin: 4px 0; }
-    .label-row { background: #555; color: #fff; padding: 6px 8px; margin-top: 20px; font-weight: bold; }
-  </style>
+    <style>
+        aside {
+            background-color: #d9edf7;
+            border: 1px solid #bce8f1;
+        }
 
-  <!-- Bootstrap -->
-  <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+        section.row > section,
+        section.row > article {
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+        }
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
-  <!--[if lt IE 9]>
-  <script
-          src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
-  </script>
-  <![endif]-->
-  <!-- Tools created by Ronan -->
-  <script src="../js/tools.js"></script>
+        .row > div {
+            background-color: #fcf8e3;
+            border: 1px solid #faebcc;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 14px;
+            margin: 4px 0;
+        }
+
+        .label-row {
+            background: #555;
+            color: #fff;
+            padding: 6px 8px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Bootstrap -->
+    <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
+    <!--[if lt IE 9]>
+    <script
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+    <!-- Tools created by Ronan -->
+    <script src="../js/tools.js"></script>
 </head>
 <body>
-<h1>Bootstrap Grid: The 12-Column System</h1>
-<p>Bootstrap divides every row into <strong>12 equal units</strong>. A column class like <code>col-md-4</code> means "take up 4 of those 12 units" — i.e. one third of the row. Columns that don't add up to 12 leave empty space; columns that exceed 12 wrap to the next line.</p>
-
-<p>
-  <div id="viewPortSizeDisplay">
-    Some default text should never display;
-  </div>
-  <script>printViewPortSize();</script>
-</p>
-
 <div class="container">
+    <div id="toc"></div>
+    <h1>Bootstrap Grid: The 12-Column System</h1>
 
-  <p class="label-row">Part 1 — Each column width from col-1 to col-12 (two col-1s fill only 2/12 of the row)</p>
+    <p>Bootstrap divides every row into <strong>12 equal units</strong>. A column class like <code>col-md-4</code> means
+        "take up 4 of those 12 units" — i.e. one third of the row. Columns that don't add up to 12 leave empty space;
+        columns that exceed 12 wrap to the next line.</p>
 
-  <section class="row">
-    <aside class="col-1"><h2>col-1 (1/12)</h2></aside>
-    <section class="col-1"><h2>col-1 (1/12)</h2></section>
-  </section>
+    <p>
+    <div id="viewPortSizeDisplay">
+        Some default text should never display;
+    </div>
+    <script>printViewPortSize();</script>
+    </p>
 
-  <section class="row">
-    <section class="col-2"><h2>col-2 (2/12 = 1/6)</h2></section>
-  </section>
+    <div class="container">
 
-  <section class="row">
-    <aside class="col-3"><h2>col-3 (3/12 = 1/4)</h2></aside>
-  </section>
+        <p class="label-row">Part 1 — Each column width from col-1 to col-12 (two col-1s fill only 2/12 of the row)</p>
 
-  <section class="row">
-    <section class="col-4"><h2>col-4 (4/12 = 1/3)</h2></section>
-  </section>
+        <section class="row">
+            <aside class="col-1"><h2>col-1 (1/12)</h2></aside>
+            <section class="col-1"><h2>col-1 (1/12)</h2></section>
+        </section>
 
-  <section class="row">
-    <aside class="col-5"><h2>col-5 (5/12)</h2></aside>
-  </section>
+        <section class="row">
+            <section class="col-2"><h2>col-2 (2/12 = 1/6)</h2></section>
+        </section>
 
-  <section class="row">
-    <section class="col-6"><h2>col-6 (6/12 = 1/2)</h2></section>
-  </section>
+        <section class="row">
+            <aside class="col-3"><h2>col-3 (3/12 = 1/4)</h2></aside>
+        </section>
 
-  <section class="row">
-    <aside class="col-7"><h2>col-7 (7/12)</h2></aside>
-  </section>
+        <section class="row">
+            <section class="col-4"><h2>col-4 (4/12 = 1/3)</h2></section>
+        </section>
 
-  <section class="row">
-    <section class="col-8"><h2>col-8 (8/12 = 2/3)</h2></section>
-  </section>
+        <section class="row">
+            <aside class="col-5"><h2>col-5 (5/12)</h2></aside>
+        </section>
 
-  <section class="row">
-    <aside class="col-9"><h2>col-9 (9/12 = 3/4)</h2></aside>
-  </section>
+        <section class="row">
+            <section class="col-6"><h2>col-6 (6/12 = 1/2)</h2></section>
+        </section>
 
-  <section class="row">
-    <section class="col-10"><h2>col-10 (10/12 = 5/6)</h2></section>
-  </section>
+        <section class="row">
+            <aside class="col-7"><h2>col-7 (7/12)</h2></aside>
+        </section>
 
-  <section class="row">
-    <aside class="col-11"><h2>col-11 (11/12)</h2></aside>
-  </section>
+        <section class="row">
+            <section class="col-8"><h2>col-8 (8/12 = 2/3)</h2></section>
+        </section>
 
-  <section class="row">
-    <section class="col-12"><h2>col-12 (full width)</h2></section>
-  </section>
+        <section class="row">
+            <aside class="col-9"><h2>col-9 (9/12 = 3/4)</h2></aside>
+        </section>
 
+        <section class="row">
+            <section class="col-10"><h2>col-10 (10/12 = 5/6)</h2></section>
+        </section>
+
+        <section class="row">
+            <aside class="col-11"><h2>col-11 (11/12)</h2></aside>
+        </section>
+
+        <section class="row">
+            <section class="col-12"><h2>col-12 (full width)</h2></section>
+        </section>
+
+    </div>
+
+    <div class="container">
+
+        <p class="label-row">Part 2 — Combining columns in a row (must add up to 12)</p>
+
+        <section class="row">
+            <aside class="col-md-4"><h2>col-md-4 (1/3)</h2></aside>
+            <article class="col-md-4"><h2>col-md-4 (1/3)</h2></article>
+            <aside class="col-md-4"><h2>col-md-4 (1/3) — three equal thirds</h2></aside>
+        </section>
+
+        <section class="row">
+            <aside class="col-md-2"><h2>col-md-2 (narrow sidebar)</h2></aside>
+            <article class="col-md-6"><h2>col-md-6 (main content)</h2></article>
+            <aside class="col-md-4"><h2>col-md-4 (wider sidebar) — total = 12</h2></aside>
+        </section>
+
+        <p class="label-row">Part 3 — Responsive breakpoints: resize the browser to see columns restack</p>
+        <p>This column uses <code>col-xs-12 col-sm-6 col-md-4 col-lg-2</code>: full width on phones, half on tablets, a
+            third on desktops, narrow on large screens.</p>
+
+        <section class="row">
+            <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><h2>xs=full, sm=half, md=third, lg=narrow</h2></aside>
+            <article class="col-xs-12 col-sm-6 col-md-4"><h2>xs=full, sm=half, md=third — no lg rule, inherits md</h2>
+            </article>
+            <aside class="col-xs-12 col-sm-6"><h2>xs=full, sm=half — no md/lg rule, inherits sm</h2></aside>
+        </section>
+
+        <p class="label-row">Part 4 — Large (lg) only: columns are full-width on anything smaller than lg (≥1200px)</p>
+        <p>Using only <code>col-lg-4</code> means these columns are full-width stacked on xs/sm/md and side-by-side only
+            at lg.</p>
+
+        <section class="row">
+            <aside class="col-lg-4"><h2>col-lg-4 — side by side only at lg (≥1200px)</h2></aside>
+            <article class="col-lg-4"><h2>col-lg-4 — stacks full-width below lg</h2></article>
+            <aside class="col-lg-4"><h2>col-lg-4</h2></aside>
+        </section>
+
+    </div>
 </div>
-
-<div class="container">
-
-  <p class="label-row">Part 2 — Combining columns in a row (must add up to 12)</p>
-
-  <section class="row">
-    <aside class="col-md-4"><h2>col-md-4 (1/3)</h2></aside>
-    <article class="col-md-4"><h2>col-md-4 (1/3)</h2></article>
-    <aside class="col-md-4"><h2>col-md-4 (1/3) — three equal thirds</h2></aside>
-  </section>
-
-  <section class="row">
-    <aside class="col-md-2"><h2>col-md-2 (narrow sidebar)</h2></aside>
-    <article class="col-md-6"><h2>col-md-6 (main content)</h2></article>
-    <aside class="col-md-4"><h2>col-md-4 (wider sidebar) — total = 12</h2></aside>
-  </section>
-
-  <p class="label-row">Part 3 — Responsive breakpoints: resize the browser to see columns restack</p>
-  <p>This column uses <code>col-xs-12 col-sm-6 col-md-4 col-lg-2</code>: full width on phones, half on tablets, a third on desktops, narrow on large screens.</p>
-
-  <section class="row">
-    <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><h2>xs=full, sm=half, md=third, lg=narrow</h2></aside>
-    <article class="col-xs-12 col-sm-6 col-md-4"><h2>xs=full, sm=half, md=third — no lg rule, inherits md</h2></article>
-    <aside class="col-xs-12 col-sm-6"><h2>xs=full, sm=half — no md/lg rule, inherits sm</h2></aside>
-  </section>
-
-  <p class="label-row">Part 4 — Large (lg) only: columns are full-width on anything smaller than lg (≥1200px)</p>
-  <p>Using only <code>col-lg-4</code> means these columns are full-width stacked on xs/sm/md and side-by-side only at lg.</p>
-
-  <section class="row">
-    <aside class="col-lg-4"><h2>col-lg-4 — side by side only at lg (≥1200px)</h2></aside>
-    <article class="col-lg-4"><h2>col-lg-4 — stacks full-width below lg</h2></article>
-    <aside class="col-lg-4"><h2>col-lg-4</h2></aside>
-  </section>
-
-</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 

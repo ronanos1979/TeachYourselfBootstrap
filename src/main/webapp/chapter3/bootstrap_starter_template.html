@@ -10,11 +10,12 @@
     <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-        padding-top: 50px;
+            padding-top: 50px;
         }
+
         .starter-template {
-        padding: 40px 15px;
-        text-align: center;
+            padding: 40px 15px;
+            text-align: center;
         }
     </style>
 
@@ -31,7 +32,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -50,11 +52,31 @@
 </nav>
 
 <div class="container">
+    <div id="toc"></div>
     <div class="starter-template">
         <h1>Bootstrap Starter Template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
+            mostly barebones HTML document.</p>
     </div>
 </div> <!-- /.container -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../includes/js/jquery.min.js"></script>

@@ -1,4 +1,5 @@
 import ViewportSize from './ViewportSize.jsx';
+import Toc from '../components/Toc.jsx';
 
 function Page({ title, intro, children }) {
   return (
@@ -15,9 +16,17 @@ export function ClearfixProblemPage() {
   return (
     <Page
       title="The ClearFix Problem"
-      intro={<p>Resize your browser to <strong>below 768px wide</strong> to see the xs breakpoint where the problem appears.</p>}
+      intro={(
+        <>
+          <Toc items={[
+            { id: 'without-clearfix', label: 'Without clearfix (broken at xs)' },
+            { id: 'with-clearfix', label: 'With clearfix (fixed at xs)' },
+          ]} />
+          <p>Resize your browser to <strong>below 768px wide</strong> to see the xs breakpoint where the problem appears.</p>
+        </>
+      )}
     >
-      <h2>Without clearfix (broken at xs)</h2>
+      <h2 id="without-clearfix">Without clearfix (broken at xs)</h2>
       <div className="row clearfix-demo">
         <div className="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br /><br />It has lots of content.<br /><br />Much more than col 2.<br /><br />This extra height is what causes the layout bug below.</div>
         <div className="col-xs-6 col-sm-3 col2">Col 2 - short</div>
@@ -25,7 +34,7 @@ export function ClearfixProblemPage() {
         <div className="col-xs-6 col-sm-3 col4">Col 4 - short</div>
       </div>
       <hr />
-      <h2>With clearfix (fixed at xs)</h2>
+      <h2 id="with-clearfix">With clearfix (fixed at xs)</h2>
       <div className="row clearfix-demo">
         <div className="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br /><br />It has lots of content.<br /><br />Much more than col 2.<br /><br />This extra height is what causes the layout bug above.</div>
         <div className="col-xs-6 col-sm-3 col2">Col 2 - short</div>

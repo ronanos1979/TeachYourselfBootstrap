@@ -1,71 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ClearFix Problem!!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClearFix Problem!!</title>
 
-  <style>
-  /*  aside { background-color: #E8E8E7; } */
-  .col-xs-6 { min-height: 30px; }
-  .col1 { background-color: #d9534f; color: white; }
-  .col2 { background-color: #5bc0de; color: white; }
-  .col3 { background-color: #5cb85c; color: white; }
-  .col4 { background-color: #f0ad4e; color: white; }
-  </style>
+    <style>
+        /*  aside { background-color: #E8E8E7; } */
+        .col-xs-6 {
+            min-height: 30px;
+        }
 
-  <!-- Bootstrap -->
-  <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/theme.css" rel="stylesheet">
-  <link href="../chapter4/styles.css" rel="stylesheet">
+        .col1 {
+            background-color: #d9534f;
+            color: white;
+        }
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
-  <!--[if lt IE 9]>
-  <script
-          src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
-  </script>
-  <![endif]-->
-  <!-- Tools created by Ronan -->
-  <script src="../js/tools.js"></script>
+        .col2 {
+            background-color: #5bc0de;
+            color: white;
+        }
+
+        .col3 {
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .col4 {
+            background-color: #f0ad4e;
+            color: white;
+        }
+    </style>
+
+    <!-- Bootstrap -->
+    <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
+    <link href="../chapter4/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
+    <!--[if lt IE 9]>
+    <script
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+    <!-- Tools created by Ronan -->
+    <script src="../js/tools.js"></script>
 </head>
 <body>
-<h1>The ClearFix Problem</h1>
-<p>Resize your browser to <strong>below 768px wide</strong> to see the xs breakpoint where the problem appears.</p>
-
-<p>
-<div id="viewPortSizeDisplay">
-  Some default text should never display;
-</div>
-<script>printViewPortSize();</script>
-</p>
-
-<h2>Without clearfix (broken at xs)</h2>
 <div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br><br>It has lots of content.<br><br>Much more than col 2.<br><br>This extra height is what causes the layout bug below.</div>
-    <div class="col-xs-6 col-sm-3 col2">Col 2 — short</div>
-    <div class="col-xs-6 col-sm-3 col3">Col 3 — gets pushed to the RIGHT (next to col 1's lower half) instead of starting at the left edge</div>
-    <div class="col-xs-6 col-sm-3 col4">Col 4 — short</div>
-  </div>
-</div>
+    <h1>The ClearFix Problem</h1>
+    <div id="toc"></div>
+    <p>Resize your browser to <strong>below 768px wide</strong> to see the xs breakpoint where the problem appears.</p>
 
-<hr/>
+    <p>
+    <div id="viewPortSizeDisplay">
+        Some default text should never display;
+    </div>
+    <script>printViewPortSize();</script>
+    </p>
 
-<h2>With clearfix (fixed at xs)</h2>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br><br>It has lots of content.<br><br>Much more than col 2.<br><br>This extra height is what causes the layout bug above.</div>
-    <div class="col-xs-6 col-sm-3 col2">Col 2 — short</div>
-    <div class="clearfix visible-xs-block"></div>
-    <div class="col-xs-6 col-sm-3 col3">Col 3 — starts correctly at the LEFT edge thanks to clearfix</div>
-    <div class="col-xs-6 col-sm-3 col4">Col 4 — short</div>
-  </div>
+    <h2>Without clearfix (broken at xs)</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br><br>It has lots of content.<br><br>Much more than
+                col 2.<br><br>This extra height is what causes the layout bug below.
+            </div>
+            <div class="col-xs-6 col-sm-3 col2">Col 2 — short</div>
+            <div class="col-xs-6 col-sm-3 col3">Col 3 — gets pushed to the RIGHT (next to col 1's lower half) instead of
+                starting at the left edge
+            </div>
+            <div class="col-xs-6 col-sm-3 col4">Col 4 — short</div>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h2>With clearfix (fixed at xs)</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col1">Col 1 is very tall.<br><br>It has lots of content.<br><br>Much more than
+                col 2.<br><br>This extra height is what causes the layout bug above.
+            </div>
+            <div class="col-xs-6 col-sm-3 col2">Col 2 — short</div>
+            <div class="clearfix visible-xs-block"></div>
+            <div class="col-xs-6 col-sm-3 col3">Col 3 — starts correctly at the LEFT edge thanks to clearfix</div>
+            <div class="col-xs-6 col-sm-3 col4">Col 4 — short</div>
+        </div>
+    </div>
+
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 

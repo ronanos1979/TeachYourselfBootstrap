@@ -29,8 +29,8 @@
         #formField:focus {
             border-color: #7B66E9;
             outline: 0;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(170, 158, 232,0.5);
-            box-shadow: inset 0 1px 1px rgba(0,0,0,0.75), 0 0 8px rgba(170,158,232,0.75);
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(170, 158, 232, 0.5);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.75), 0 0 8px rgba(170, 158, 232, 0.75);
         }
     </style>
 </head>
@@ -38,8 +38,9 @@
 
 <div class="container">
 
+    <div id="toc"></div>
     <div class="chapter9">
-        <h2>Forms</h2>
+        <h1>Forms</h1>
         <p>HTML forms are used to collect user input. They can include various types of input fields, such as text
             boxes,
             radio buttons, checkboxes, and dropdown lists. Forms also support validation to ensure that the data entered
@@ -137,6 +138,7 @@
     </div>
 
     <div class="chapter-9-horizontal-form">
+        <h1>Horizontal Form form-inline</h1>
         <p>This is a form that is horizontal using form-inline</p>
         <form action="#" class="form-inline">
             <div class="form-group">
@@ -157,6 +159,7 @@
     </div>
 
     <div class="chapter-9-text-area">
+        <h1>Text Areas</h1>
         <p>This is a text area</p>
         <textarea id="textAreaField" rows="4" class="form-control"></textarea>
 
@@ -168,7 +171,7 @@
 
 
     <div class="chapter-9-various-input-fields">
-        <p>The various input fields</p>
+        <h1>The various input fields</h1>
         <input type="checkbox" id="checkboxField"> Checkbox Field<br/>
         <input type="color" id="colorField" placeholder="Color Field" class="form-control"><br/>
         <input type="date" id="dateField" placeholder="Date Field" class="form-control"><br/>
@@ -199,7 +202,7 @@
     </div>
 
     <div class="chapter-9-checkboxes-and-radio-buttons">
-        <p>Checkboxes and Radio Buttons</p>
+        <h1>Checkboxes and Radio Buttons</h1>
         <div class="checkbox">
             <label>
                 <input type="checkbox" id="checkbox1"> Checkbox 1
@@ -258,6 +261,7 @@
     </div>
 
     <div class="chapter-9-dropdown-menus">
+        <h1>Drop Down Menus</h1>
         <select id="dropdown" class="form-control">
             <option>pick one</option>
             <option>one</option>
@@ -274,28 +278,33 @@
     </div>
 
 
-    <div class="chapter-9-sizing-form-controls">
-        <h3>Sizing Form controls</h3>
-        <input type="text" id="textField1" class="form-control input-lg">
-        <input type="text" id="textField2" class="form-control input-sm">
-    </div>
+    <div class="container">
+        <h1>Sizing Form controls</h1>
+        <div class="chapter-9-sizing-form-controls">
 
-    <div class="form-group form-group-lg">
-        <input type="text" id="textField3">
-        <p>More Form Group implemented different using form-group-lg</p>
-    </div>
-    <div class="form-group form-group-sm">
-        <input type="text" id="textField4">
-        <p>More Form Group implemented different using form-group-sm</p>
+            <input type="text" id="textField1" class="form-control input-lg">
+            <input type="text" id="textField2" class="form-control input-sm">
+        </div>
+
+        <div class="form-group form-group-lg">
+            <input type="text" id="textField3">
+            <p>More Form Group implemented different using form-group-lg</p>
+        </div>
+        <div class="form-group form-group-sm">
+            <input type="text" id="textField4">
+            <p>More Form Group implemented different using form-group-sm</p>
+        </div>
+
     </div>
 
     <div class="chapter-9-help-blocks">
+        <h1>Help Blocks</h1>
         <span id="helpfield" class="help-block">This text describes a form field.</span>
         <input type="text" id="inputWithHelpBlock" class="form-control" aria-describedby="helpfield">
     </div>
 
     <div class="chapter9-basic-input-groups">
-        <p>Basic Input Groups</p>
+        <h1>Basic Input Groups</h1>
         <form action="#" class="form-inline">
             <div class="form-group">
                 <div class="input-group">
@@ -310,7 +319,7 @@
     </div>
 
     <div class="chapter9-different-size-input-groups">
-        <p>Different Size Input Groups</p>
+        <h1>Different Size Input Groups</h1>
         <p>
         <div class="input-group input-group-lg">
             <label for="email3" class="sr-only">Username</label>
@@ -341,13 +350,15 @@
     </div>
 
     <div class="chapter9-fancy-addons">
+        <h1>Fancy Addons</h1>
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
                     <span class="input-group-addon">
                         <input type="checkbox" id="other" aria-label="Other" value="other">
                     </span>
-                    <input type="text" id="otherText" class="form-control" aria-label="Other Text" placeholder="other text">
+                    <input type="text" id="otherText" class="form-control" aria-label="Other Text"
+                           placeholder="other text">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -355,19 +366,21 @@
                     <span class="input-group-addon">
                         <input type="radio" id="other2" aria-label="Other 2" value="other2">
                     </span>
-                    <input type="text" id="otherText2" class="form-control" aria-label="Other Text 2" placeholder="other text">
+                    <input type="text" id="otherText2" class="form-control" aria-label="Other Text 2"
+                           placeholder="other text">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="chapter9-disabled-and-readonly-states">
-        <p>Disabled and Read Only States</p>
+        <h1>Disabled and Read Only States</1>
         <input type="text" class="form-control" id="textField5" disabled>
         <input type="text" class="form-control" id="textField6" read-only>
     </div>
 
     <div class="chapter9-validation-states">
+        <h1>Validation States</h1>
         <form>
             <div class="form-group has-success">
                 <label for="textSuccess">Success</label>
@@ -392,6 +405,24 @@
 
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../includes/js/jquery.min.js"></script>

@@ -64,3 +64,9 @@ Use the sr-only class to define text that displays only on screenreaders. E.g.
 ```
 <td class="warning"><span class="sr-only">Warning: <span>Sr Director of Engineering</td>
 ```
+
+### Generating images
+To generate images just use a site similar to this
+```css
+https://placehold.co/458x87/aaaaaa/ffffff?text=Headline
+```

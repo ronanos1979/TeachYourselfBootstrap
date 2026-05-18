@@ -60,9 +60,10 @@
     <p>The Headline text was hidden from display by CSS. Useful for SEO.</p>
 </div>
 <div class="container">
+    <div id="toc"></div>
     <div class="starter-template">
         <h1>Typography</h1>
-        <h1>&lt;h1&gt; Bootstrap heading</h1>
+        <h1>h1 Bootstrap heading</h1>
         <p>This is a paragraph with an <span class="h1">inline &lt;h1&gt; heading<small>with secondary text</small><span class="small">and span class small similar to small tag</span></span></span> </p>
         <h2>&lt;h2&gt; Bootstrap heading</h2>
         <p>This is a paragraph with an <span class="h2">inline &lt;h2&gt; heading<small>with secondary text</small><span class="small">and span class small similar to small tag</span></span></span> </p>
@@ -84,7 +85,7 @@
 </div>
 
 <div class="container">
-    <h3>Inline Text</h3><br/>
+    <h1>Inline Text</h1><br/>
     <del>This is deleted text</del><br/>
     <em>This is emphasized text in italics</em><br/>
     <ins>This is inserted text</ins><br/>
@@ -97,7 +98,7 @@
 
 <div class="container">
 
-    <h3>Aligning Elements</h3>
+    <h1>Aligning Elements</h1>
     <p><strong>This is paragraph text.</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p class="text-left"><strong>This is left aligned text.</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p class="text-right"><strong>This is right aligned text.</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -120,7 +121,7 @@
 </div>
 
 <div class="container">
-    <h3>Transforming Text Elements</h3>
+    <h1>Transforming Text Elements</h1>
     <p class="text-lowercase">This text will be in lowercase.</p>
     <p class="text-uppercase">This text will be in uppercase.</p>
     <p class="text-capitalize">This text will be in capitalized case.</p>
@@ -149,7 +150,7 @@
 </div>
 
 <div class="container">
-    <h3>Other Text Blocks</h3>
+    <h1>Other Text Blocks</h1>
     <code>This text is in code block.</code><br/>
     <p>Here is some <code>inline code</code> in a paragraph.</p>
     <pre><code>This text is in code block.</code></pre>
@@ -164,7 +165,7 @@
 </div>
 
 <div class="container">
-    <h3>Quotations</h3>
+    <h1>Quotations</h1>
     <blockquote>
         <p>`Twas brillig, and the slithy toves<br/>
         Did gyre and gimble in the wabe;<br/>
@@ -175,7 +176,7 @@
 </div>
 
 <div class="container">
-    <h3>Lists</h3>
+    <h1>Lists</h1>
     <ul>
         <li>Unordered list item 1</li>
         <li>Unordered list item 2</li>
@@ -218,13 +219,13 @@
 
 
 <div class="container">
-    <h3>Abbreviations</h3>
+    <h1>Abbreviations</h1>
     <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.</p>  
     <p>I wrote a book on <abbr title="Cascading Style Sheets">CSS</abbr> and another on <abbr title="JavaScript" class=""initiailism>JS</abbr>. The JS uses initialism class.</p>
 </div>
 
 <div class="container">
-    <h3>Address</h3>
+    <h1>Address</h1>
     <address>
         <strong>Twitter, Inc.</strong><br>
         1355 Market Street, Suite 900<br>
@@ -234,7 +235,7 @@
 </div>
 
 <div class="container">
-    <h3>Emphasis Classes</h3>
+    <h1>Emphasis Classes</h1>
     <p class="emphasis">This text will be in emphasis color.</p>
     <p class="emphasis-muted">This text will be in emphasis muted color.</p>
     <p class="emphasis-primary">This text will be in emphasis primary color.</p>
@@ -251,7 +252,7 @@
 
 
 <div class="container">
-    <h3>Blockquotes</h3>
+    <h1>Blockquotes</h1>
     <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
         <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -265,7 +266,25 @@
 
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var headings = document.querySelectorAll('.container h1');
+            if (!headings.length) return;
+            var items = Array.from(headings).map(function (h) {
+                if (!h.id) {
+                    h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                }
+                return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+            });
+            document.getElementById('toc').innerHTML =
+                '<div class="panel panel-default">' +
+                '<div class="panel-heading"><strong>Contents</strong></div>' +
+                '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+                '</div>';
+        });
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../includes/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../includes/js/bootstrap.min.js"></script>

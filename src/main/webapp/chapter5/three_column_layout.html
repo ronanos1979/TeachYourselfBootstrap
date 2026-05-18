@@ -1,80 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Three Column Layout!!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Three Column Layout!!</title>
 
-  <style>
-    aside   { background-color: #d9edf7; border: 1px solid #bce8f1; padding: 8px; }
-    article { background-color: #dff0d8; border: 1px solid #d6e9c6; padding: 8px; }
-    .label-row { background: #555; color: #fff; padding: 6px 8px; margin: 16px 0 4px; font-weight: bold; }
-  </style>
+    <style>
+        aside {
+            background-color: #d9edf7;
+            border: 1px solid #bce8f1;
+            padding: 8px;
+        }
 
-  <!-- Bootstrap -->
-  <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+        article {
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            padding: 8px;
+        }
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
-  <!--[if lt IE 9]>
-  <script
-          src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
-  </script>
-  <![endif]-->
-  <!-- Tools created by Ronan -->
-  <script src="../js/tools.js"></script>
+        .label-row {
+            background: #555;
+            color: #fff;
+            padding: 6px 8px;
+            margin: 16px 0 4px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Bootstrap -->
+    <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page vie file:// -->
+    <!--[if lt IE 9]>
+    <script
+            src="https://css.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://css.maxcdn.com/respond/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+    <!-- Tools created by Ronan -->
+    <script src="../js/tools.js"></script>
 </head>
 <body>
-<h1>Three Column Layout</h1>
-<p>Demonstrates how Bootstrap's <code>col-md-*</code> classes create multi-column layouts. Columns stack vertically on small screens (below md, i.e. &lt;992px) and sit side by side on medium screens and above.</p>
-
-<p>
-  <div id="viewPortSizeDisplay">
-    Some default text should never display;
-  </div>
-  <script>printViewPortSize();</script>
-</p>
-
 <div class="container">
+    <div id="toc"></div>
 
-  <p class="label-row">Example 1 — Three equal columns (each col-md-4 = 4/12 = one third)</p>
-  <p>Resize below 992px: all three columns stack into a single full-width column.</p>
-  <section class="row">
-    <aside class="col-md-4"><h2>Column 1 — col-md-4</h2><p>One third of the row at md and above.</p></aside>
-    <article class="col-md-4"><h2>Column 2 — col-md-4</h2><p>One third of the row at md and above.</p></article>
-    <aside class="col-md-4"><h2>Column 3 — col-md-4</h2><p>One third of the row. 4+4+4=12. ✓</p></aside>
-  </section>
+    <h1>Three Column Layout</h1>
 
-  <p class="label-row">Example 2 — Unequal columns: narrow sidebar, wide content, medium sidebar (2+6+4=12)</p>
-  <section class="row">
-    <aside class="col-md-2"><h2>col-md-2</h2><p>Narrow left sidebar (2/12)</p></aside>
-    <article class="col-md-6"><h2>col-md-6</h2><p>Main content area — half the page (6/12)</p></article>
-    <aside class="col-md-4"><h2>col-md-4</h2><p>Right sidebar (4/12). Total = 12 ✓</p></aside>
-  </section>
+    <p>Demonstrates how Bootstrap's <code>col-md-*</code> classes create multi-column layouts. Columns stack vertically
+        on small screens (below md, i.e. &lt;992px) and sit side by side on medium screens and above.</p>
 
-  <p class="label-row">Example 3 — Responsive columns: different widths at each breakpoint</p>
-  <p>
-    <strong>Col 1:</strong> <code>col-xs-12 col-sm-6 col-md-4 col-lg-2</code> — gets narrower as the screen grows.<br>
-    <strong>Col 2:</strong> <code>col-xs-12 col-sm-6 col-md-4</code> — no lg rule, so it keeps md width on large screens.<br>
-    <strong>Col 3:</strong> <code>col-xs-12 col-sm-6</code> — no md/lg rule, so it keeps sm width on larger screens.
-  </p>
-  <section class="row">
-    <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><h2>Col 1</h2><p>xs: full | sm: half | md: third | lg: narrow</p></aside>
-    <article class="col-xs-12 col-sm-6 col-md-4"><h2>Col 2</h2><p>xs: full | sm: half | md+: third</p></article>
-    <aside class="col-xs-12 col-sm-6"><h2>Col 3</h2><p>xs: full | sm+: half</p></aside>
-  </section>
+    <p>
+    <div id="viewPortSizeDisplay">
+        Some default text should never display;
+    </div>
+    <script>printViewPortSize();</script>
+    </p>
 
-  <p class="label-row">Example 4 — col-lg-4 only: side by side ONLY on large screens (≥1200px)</p>
-  <p>No xs/sm/md rules are set, so these columns stack full-width on anything below lg. Try resizing to see them collapse.</p>
-  <section class="row">
-    <aside class="col-lg-4"><h2>col-lg-4</h2><p>Full-width below lg, one third at lg+</p></aside>
-    <article class="col-lg-4"><h2>col-lg-4</h2><p>Full-width below lg, one third at lg+</p></article>
-    <aside class="col-lg-4"><h2>col-lg-4</h2><p>Full-width below lg, one third at lg+</p></aside>
-  </section>
+    <div class="container">
+
+        <p class="label-row">Example 1 — Three equal columns (each col-md-4 = 4/12 = one third)</p>
+        <p>Resize below 992px: all three columns stack into a single full-width column.</p>
+        <section class="row">
+            <aside class="col-md-4"><h2>Column 1 — col-md-4</h2>
+                <p>One third of the row at md and above.</p></aside>
+            <article class="col-md-4"><h2>Column 2 — col-md-4</h2>
+                <p>One third of the row at md and above.</p></article>
+            <aside class="col-md-4"><h2>Column 3 — col-md-4</h2>
+                <p>One third of the row. 4+4+4=12. ✓</p></aside>
+        </section>
+
+        <p class="label-row">Example 2 — Unequal columns: narrow sidebar, wide content, medium sidebar (2+6+4=12)</p>
+        <section class="row">
+            <aside class="col-md-2"><h2>col-md-2</h2>
+                <p>Narrow left sidebar (2/12)</p></aside>
+            <article class="col-md-6"><h2>col-md-6</h2>
+                <p>Main content area — half the page (6/12)</p></article>
+            <aside class="col-md-4"><h2>col-md-4</h2>
+                <p>Right sidebar (4/12). Total = 12 ✓</p></aside>
+        </section>
+
+        <p class="label-row">Example 3 — Responsive columns: different widths at each breakpoint</p>
+        <p>
+            <strong>Col 1:</strong> <code>col-xs-12 col-sm-6 col-md-4 col-lg-2</code> — gets narrower as the screen
+            grows.<br>
+            <strong>Col 2:</strong> <code>col-xs-12 col-sm-6 col-md-4</code> — no lg rule, so it keeps md width on large
+            screens.<br>
+            <strong>Col 3:</strong> <code>col-xs-12 col-sm-6</code> — no md/lg rule, so it keeps sm width on larger
+            screens.
+        </p>
+        <section class="row">
+            <aside class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><h2>Col 1</h2>
+                <p>xs: full | sm: half | md: third | lg: narrow</p></aside>
+            <article class="col-xs-12 col-sm-6 col-md-4"><h2>Col 2</h2>
+                <p>xs: full | sm: half | md+: third</p></article>
+            <aside class="col-xs-12 col-sm-6"><h2>Col 3</h2>
+                <p>xs: full | sm+: half</p></aside>
+        </section>
+
+        <p class="label-row">Example 4 — col-lg-4 only: side by side ONLY on large screens (≥1200px)</p>
+        <p>No xs/sm/md rules are set, so these columns stack full-width on anything below lg. Try resizing to see them
+            collapse.</p>
+        <section class="row">
+            <aside class="col-lg-4"><h2>col-lg-4</h2>
+                <p>Full-width below lg, one third at lg+</p></aside>
+            <article class="col-lg-4"><h2>col-lg-4</h2>
+                <p>Full-width below lg, one third at lg+</p></article>
+            <aside class="col-lg-4"><h2>col-lg-4</h2>
+                <p>Full-width below lg, one third at lg+</p></aside>
+        </section>
+
+    </div>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var headings = document.querySelectorAll('.container h1');
+        if (!headings.length) return;
+        var items = Array.from(headings).map(function (h) {
+            if (!h.id) {
+                h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            return '<a href="#' + h.id + '" class="list-group-item">' + h.textContent.trim() + '</a>';
+        });
+        document.getElementById('toc').innerHTML =
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading"><strong>Contents</strong></div>' +
+            '<div class="list-group" style="margin-bottom:0">' + items.join('') + '</div>' +
+            '</div>';
+    });
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 

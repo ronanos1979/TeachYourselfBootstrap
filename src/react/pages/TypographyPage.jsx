@@ -1,4 +1,18 @@
+import Toc from '../components/Toc.jsx';
+
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+
+const TOC_ITEMS = [
+  { id: 'inline-text', label: 'Inline Text' },
+  { id: 'aligning-elements', label: 'Aligning Elements' },
+  { id: 'transforming-text-elements', label: 'Transforming Text Elements' },
+  { id: 'other-text-blocks', label: 'Other Text Blocks' },
+  { id: 'quotations', label: 'Quotations' },
+  { id: 'lists', label: 'Lists' },
+  { id: 'abbreviations', label: 'Abbreviations' },
+  { id: 'address', label: 'Address' },
+  { id: 'blockquotes', label: 'Blockquotes' },
+];
 
 function HeadingSample({ level }) {
   const Tag = `h${level}`;
@@ -28,6 +42,7 @@ export default function TypographyPage() {
 
       <section className="container starter-template">
         <h1>Typography</h1>
+        <Toc items={TOC_ITEMS} />
         {[1, 2, 3, 4, 5, 6].map(level => <HeadingSample level={level} key={level} />)}
       </section>
 
@@ -38,7 +53,7 @@ export default function TypographyPage() {
       </section>
 
       <section className="container">
-        <h3>Inline Text</h3>
+        <h3 id="inline-text">Inline Text</h3>
         <del>This is deleted text</del><br />
         <em>This is emphasized text in italics</em><br />
         <ins>This is inserted text</ins><br />
@@ -50,7 +65,7 @@ export default function TypographyPage() {
       </section>
 
       <section className="container">
-        <h3>Aligning Elements</h3>
+        <h3 id="aligning-elements">Aligning Elements</h3>
         {['', 'text-left', 'text-right', 'text-center', 'text-justify', 'text-nowrap'].map(className => (
           <p className={className} key={className || 'default'}><strong>{className || 'Default paragraph text'}.</strong> {lorem}</p>
         ))}
@@ -68,14 +83,14 @@ export default function TypographyPage() {
       </section>
 
       <section className="container">
-        <h3>Transforming Text Elements</h3>
+        <h3 id="transforming-text-elements">Transforming Text Elements</h3>
         {['lowercase', 'uppercase', 'capitalize', 'muted', 'primary', 'success', 'info', 'warning', 'danger', 'default', 'inverse'].map(name => (
           <p className={`text-${name}`} key={name}>This text will be in {name} color or case.</p>
         ))}
       </section>
 
       <section className="container">
-        <h3>Other Text Blocks</h3>
+        <h3 id="other-text-blocks">Other Text Blocks</h3>
         <code>This text is in code block.</code><br />
         <p>Here is some <code>inline code</code> in a paragraph.</p>
         <pre><code>This text is in code block.</code></pre>
@@ -88,7 +103,7 @@ It preserves whitespace and line breaks.</pre>
       </section>
 
       <section className="container">
-        <h3>Quotations</h3>
+        <h3 id="quotations">Quotations</h3>
         <blockquote>
           <p>`Twas brillig, and the slithy toves<br />Did gyre and gimble in the wabe;<br />All mimsy were the borogoves,<br />And the mome raths outgrabe.</p>
           <footer>Lewis Carroll in <cite title="The Jabberwocky">The Jabberwocky</cite></footer>
@@ -96,7 +111,7 @@ It preserves whitespace and line breaks.</pre>
       </section>
 
       <section className="container">
-        <h3>Lists</h3>
+        <h3 id="lists">Lists</h3>
         <ul><li>Unordered list item 1</li><li>Unordered list item 2</li><li>Unordered list item 3</li></ul>
         <ol><li>Ordered list item 1</li><li>Ordered list item 2</li><li>Ordered list item 3</li></ol>
         <ul className="list-unstyled"><li>Unstyled list item 1</li><li>Unstyled list item 2</li><li>Unstyled list item 3</li></ul>
@@ -110,18 +125,18 @@ It preserves whitespace and line breaks.</pre>
       </section>
 
       <section className="container">
-        <h3>Abbreviations</h3>
+        <h3 id="abbreviations">Abbreviations</h3>
         <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for creating web pages and web applications.</p>
         <p>I wrote a book on <abbr title="Cascading Style Sheets">CSS</abbr> and another on <abbr title="JavaScript" className="initialism">JS</abbr>.</p>
       </section>
 
       <section className="container">
-        <h3>Address</h3>
+        <h3 id="address">Address</h3>
         <address><strong>Twitter, Inc.</strong><br />1355 Market Street, Suite 900<br />San Francisco, CA 94103<br /><abbr title="Phone">P:</abbr> (123) 456-7890</address>
       </section>
 
       <section className="container">
-        <h3>Blockquotes</h3>
+        <h3 id="blockquotes">Blockquotes</h3>
         <blockquote><p>{lorem}</p><footer>Someone famous in <cite title="Source Title">Source Title</cite></footer></blockquote>
         <blockquote className="blockquote-reverse"><p>{lorem}</p><footer>Someone famous in <cite title="Source Title">Source Title</cite></footer></blockquote>
       </section>
