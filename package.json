@@ -5,7 +5,10 @@
   "description": "Teach Yourself Bootstrap in 24 hours",
   "type": "module",
   "scripts": {
+    "copy-libs": "node scripts/copy-libs.js",
+    "predev": "npm run copy-libs",
     "dev": "vite",
+    "prebuild": "npm run copy-libs",
     "build": "vite build",
     "lint": "eslint .",
     "test": "vitest run",
@@ -19,6 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.4.1",
+    "bootstrap-icons": "^1.13.1",
     "jquery": "^3.7.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
