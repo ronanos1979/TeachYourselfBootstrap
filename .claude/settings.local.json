@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/generate-static.js)",
+      "Bash(curl -i https://bootstrap.ronanos.com)",
+      "Bash(curl -i https://bootstrap.ronanos.com/chapter1)"
+    ]
+  }
+}
