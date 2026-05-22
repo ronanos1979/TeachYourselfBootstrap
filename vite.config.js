@@ -7,10 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: {
-        main: 'src/main/webapp/index.html',
-        static: 'src/main/webapp/static.html',
-      },
+      input: 'src/main/webapp/index.html',
     },
   },
   test: {

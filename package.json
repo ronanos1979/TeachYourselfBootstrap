@@ -6,10 +6,13 @@
   "type": "module",
   "scripts": {
     "copy-libs": "node scripts/copy-libs.js",
-    "predev": "npm run copy-libs",
+    "generate-static": "node scripts/generate-static.js",
+    "copy-static": "node scripts/copy-static.js",
+    "predev": "npm run copy-libs && npm run generate-static",
     "dev": "vite",
-    "prebuild": "npm run copy-libs",
+    "prebuild": "npm run copy-libs && npm run generate-static",
     "build": "vite build",
+    "postbuild": "npm run copy-static",
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview"
