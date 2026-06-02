@@ -1,5 +1,17 @@
 export const chapters = [
   {
+    number: 11,
+    title: 'Chapter 11 - Buttons and Button Groups',
+    links: [
+      {
+        href: '/react/chapter11/buttons-and-buttongroups',
+        label: 'Buttons and Button Groups',
+        description: 'Buttons, button sizes, groups, justified groups and toolbars.',
+      },
+      { href: '/chapter11/buttons_and_buttongroups.html', label: 'Buttons and Button Groups Static HTML' },
+    ],
+  },
+  {
     number: 10,
     title: 'Chapter 10 - Images, Media Objects and Glyphicons',
     links: [

@@ -250,3 +250,22 @@ footer a {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .75), 0 0 8px rgba(170, 158, 232, .75);
 }
+
+.chapter11-page section {
+  margin-bottom: 24px;
+}
+
+.chapter11-page .btn {
+  margin-right: 4px;
+  margin-bottom: 6px;
+}
+
+.chapter11-page .btn-group .btn,
+.chapter11-page .btn-toolbar .btn {
+  margin-right: 0;
+}
+
+.chapter11-page .btn-group,
+.chapter11-page .btn-toolbar {
+  margin-bottom: 10px;
+}

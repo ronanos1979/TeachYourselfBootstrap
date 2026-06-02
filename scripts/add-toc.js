@@ -83,6 +83,7 @@ const files = [
   'src/main/webapp/chapter7/typography.html',
   'src/main/webapp/chapter8/tables.html',
   'src/main/webapp/chapter9/forms.html',
+  'src/main/webapp/chapter11/buttons_and_buttongroups.html',
 ];
 
 files.forEach(addToc);

@@ -7,6 +7,8 @@ describe('App', () => {
     render(<App />);
 
     expect(screen.getByRole('heading', { name: 'Teach Yourself Bootstrap' })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: 'Buttons and Button Groups' })[0]).toHaveAttribute('href', '/react/chapter11/buttons-and-buttongroups');
+    expect(screen.getAllByRole('link', { name: 'Buttons and Button Groups Static HTML' })[0]).toHaveAttribute('href', '/chapter11/buttons_and_buttongroups.html');
     expect(screen.getAllByRole('link', { name: 'Styling Tables' })[0]).toHaveAttribute('href', '/react/chapter8/tables');
     expect(screen.getAllByRole('link', { name: 'Grid' })[0]).toHaveAttribute('href', '/react/chapter2/grid');
     expect(screen.getAllByText('Chapter 2 - The Grid')[0]).toBeInTheDocument();
@@ -20,7 +22,7 @@ describe('App', () => {
     expect(screen.getByRole('button', { name: /Chapters 7-12/ })).toHaveClass('dropdown-toggle');
     expect(screen.queryByRole('button', { name: /^Chapters$/ })).not.toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: 'Responsive Web Layout' })[0]).toHaveAttribute('href', '/react/chapter5/responsive-web-layout');
-    expect(screen.getAllByRole('link', { name: 'Forms' })[0]).toHaveAttribute('href', '/react/chapter9/forms');
+    expect(screen.getAllByRole('link', { name: 'Forms via REACT' })[0]).toHaveAttribute('href', '/react/chapter9/forms');
     expect(screen.getAllByRole('link', { name: 'The Bootstrap Theme' })[0]).toHaveAttribute('href', '/chapter3/the_bootstrap_theme.html');
     expect(screen.getAllByText('Chapter 8 - Styling Tables')[0]).toBeInTheDocument();
   });
@@ -46,6 +48,8 @@ describe('App', () => {
       ['/react/chapter7/typography', 'Typography'],
       ['/react/chapter8/tables', 'Bootstrap Starter Template'],
       ['/react/chapter9/forms', 'Forms'],
+      ['/react/chapter10/images-media-glyphicons', 'Images, Media Objects and Glyphicons'],
+      ['/react/chapter11/buttons-and-buttongroups', 'Buttons and Button Groups'],
     ];
 
     examples.forEach(([path, heading]) => {
